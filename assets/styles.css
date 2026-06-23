@@ -366,6 +366,25 @@ section { padding-block: clamp(3rem, 5.5vw, 5.25rem); }
 .perk-mark { color: var(--brass); font-size: 0.85rem; line-height: 1.6; flex-shrink: 0; }
 .perk-text { color: var(--ink-soft); font-size: 0.92em; line-height: 1.5; }
 .perk-text strong { display: block; font-family: var(--font-display); font-weight: 500; font-size: 1.18rem; line-height: 1.15; color: var(--ink); margin-bottom: 0.35rem; letter-spacing: -0.01em; }
+.perk-link { display: inline-block; margin-top: 0.3rem; font-family: var(--font-mono); font-size: 0.74rem; letter-spacing: 0.03em; color: var(--oxblood); border-bottom: 1px solid color-mix(in srgb, var(--oxblood) 40%, transparent); transition: color 0.25s, border-color 0.25s; }
+.perk-link:hover { color: var(--oxblood-dk); border-color: var(--oxblood); }
+
+/* ---------------- free-audit CTA band ---------------- */
+.audit { background: var(--oxblood); color: #f6ede0; position: relative; overflow: hidden; }
+.audit::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0.5;
+  background: radial-gradient(120% 140% at 100% 0%, rgba(194,160,97,0.22), transparent 55%);
+}
+.audit-inner { position: relative; display: grid; grid-template-columns: 1.55fr 0.85fr; gap: clamp(1.8rem, 4vw, 4rem); align-items: center; }
+.audit-kicker { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--brass-lt); display: flex; align-items: center; gap: 0.6em; margin-bottom: 1rem; }
+.audit-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--brass-lt); box-shadow: 0 0 0 0 color-mix(in srgb, var(--brass-lt) 70%, transparent); animation: pulse-green 2.4s ease-out infinite; }
+.audit-title { font-family: var(--font-display); font-weight: 400; font-size: clamp(1.85rem, 4vw, 2.9rem); line-height: 1.05; letter-spacing: -0.02em; color: #fbf4e8; text-wrap: balance; }
+.audit-text { margin-top: 1.1rem; max-width: 54ch; color: rgba(246,237,224,0.86); font-size: 1.05em; }
+.audit-action { display: flex; flex-direction: column; align-items: flex-start; gap: 0.7rem; }
+.audit-btn { background: #f3ecdf; color: var(--oxblood-dk); font-size: 0.9rem; padding: 1em 1.7em; box-shadow: 0 14px 30px -14px rgba(0,0,0,0.55); }
+.audit-btn:hover { background: #fff; transform: translateY(-2px); box-shadow: 0 20px 38px -16px rgba(0,0,0,0.6); }
+.audit-note { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.04em; color: rgba(246,237,224,0.6); }
+
 
 /* ---------------- process ---------------- */
 .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--hairline); border: 1px solid var(--hairline); border-radius: var(--radius); overflow: hidden; }
@@ -522,7 +541,7 @@ section { padding-block: clamp(3rem, 5.5vw, 5.25rem); }
   .hero-grid { grid-template-columns: 1fr; }
   .hero-stack { display: none; }
   .plates, .svc-grid, .price-grid, .steps, .who-grid, .resume-grid { grid-template-columns: 1fr 1fr; }
-  .about-grid, .contact-grid { grid-template-columns: 1fr; }
+  .about-grid, .contact-grid, .audit-inner { grid-template-columns: 1fr; }
   .about-rail { flex-direction: row; justify-content: flex-start; }
   .footer-inner { grid-template-columns: 1fr; gap: 1.6rem; }
 }

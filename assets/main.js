@@ -90,6 +90,22 @@
     counters.forEach(animateCount);
   }
 
+  /* ---- free-audit deep-link: pre-select the form's project type ---- */
+  document.querySelectorAll("[data-audit]").forEach(function (link) {
+    link.addEventListener("click", function () {
+      var sel = document.getElementById("type");
+      if (sel) {
+        for (var i = 0; i < sel.options.length; i++) {
+          if (/audit/i.test(sel.options[i].textContent)) { sel.selectedIndex = i; break; }
+        }
+      }
+      setTimeout(function () {
+        var name = document.getElementById("name");
+        if (name) name.focus({ preventScroll: true });
+      }, reduceMotion ? 50 : 650);
+    });
+  });
+
   /* ---- contact form: Formspree if configured, else mailto fallback ---- */
   var form = document.querySelector(".contact-form");
   if (form) {
