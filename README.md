@@ -16,13 +16,24 @@ werth-design/
 ├── assets/
 │   ├── styles.css        # heirloom-editorial design system
 │   ├── main.js           # reveals, count-ups, mobile nav, form handling
+│   ├── chatbot.css       # styles for Wren, the demo AI assistant
+│   ├── chatbot.js        # Wren — scripted assistant + Formspree lead capture
 │   ├── favicon.svg       # W seal favicon
-│   └── og-image.svg      # social share card (1200×630)
+│   ├── og-image.svg/.png # social share card (1200×630)
+│   └── screenshots/      # real screenshots of the six live sites (work cards)
 ├── robots.txt
 ├── sitemap.xml
 ├── .nojekyll             # tells GitHub Pages to serve files as-is
-└── GROWTH-PLAN.md        # the sales/marketing strategy
+├── GROWTH-PLAN.md        # the sales/marketing strategy
+└── TARGETS.md            # prospect hit-list of real local businesses + outreach templates
 ```
+
+**Wren, the AI chat demo:** a scripted, on-device assistant (no API key, safe for static
+hosting) that answers from the site's real content and captures leads to the same Formspree
+endpoint. It's honestly presented as a *demo* of the kind of assistant built for clients. Edit its
+answers in `assets/chatbot.js` (the `KB` array); the Formspree endpoint also lives there. To
+re-capture the portfolio screenshots: headless Chrome `--screenshot` at 1280×860 @2×, then
+`sips -Z 1300 -s format jpeg` into `assets/screenshots/`.
 
 No build step. No framework. Just open `index.html`.
 
