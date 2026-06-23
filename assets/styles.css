@@ -357,6 +357,15 @@ section { padding-block: clamp(3rem, 5.5vw, 5.25rem); }
 .addon-label { font-family: var(--font-display); font-size: 1.2rem; font-weight: 460; }
 .addon-price { font-family: var(--font-mono); font-size: 0.82rem; color: var(--oxblood); justify-self: end; }
 .addon-note { grid-column: 1 / -1; color: var(--ink-faint); font-size: 0.9em; font-style: italic; }
+.addon-note strong { color: var(--oxblood); font-style: normal; font-weight: 500; }
+
+.price-perks { margin-top: 1.5rem; border-top: 1px solid var(--hairline); padding-top: clamp(1.6rem, 3vw, 2.2rem); }
+.perks-lead { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 1.3rem; }
+.perks-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.6rem; }
+.perks-list li { display: flex; gap: 0.7rem; align-items: flex-start; }
+.perk-mark { color: var(--brass); font-size: 0.85rem; line-height: 1.6; flex-shrink: 0; }
+.perk-text { color: var(--ink-soft); font-size: 0.92em; line-height: 1.5; }
+.perk-text strong { display: block; font-family: var(--font-display); font-weight: 500; font-size: 1.18rem; line-height: 1.15; color: var(--ink); margin-bottom: 0.35rem; letter-spacing: -0.01em; }
 
 /* ---------------- process ---------------- */
 .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--hairline); border: 1px solid var(--hairline); border-radius: var(--radius); overflow: hidden; }
@@ -521,7 +530,7 @@ section { padding-block: clamp(3rem, 5.5vw, 5.25rem); }
   .proof-grid { grid-template-columns: 1fr 1fr; }
   .proof-item:nth-child(odd) { border-left: 0; }
   .proof-item:nth-child(n+3) { border-top: 1px solid var(--hairline-2); }
-  .plates, .svc-grid, .price-grid, .steps, .price-addons, .field-row, .who-grid, .resume-grid { grid-template-columns: 1fr; }
+  .plates, .svc-grid, .price-grid, .steps, .price-addons, .field-row, .who-grid, .resume-grid, .perks-list { grid-template-columns: 1fr; }
   .hero-title { font-size: clamp(2.6rem, 12vw, 3.4rem); }
 }
 

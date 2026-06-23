@@ -205,7 +205,7 @@ solo-studio value vs. agency overhead):
 | **Grow** | from **$4,500** | Mid custom range; bundles a site *and* one AI feature — the differentiator. This is the target sale and the "Most chosen" anchor. |
 | **Bespoke** | from **$2,500** | Legacy archives, apps, full AI builds. "From" floor anchors value; real number set per project (AI builds reach $10k–$25k per market data). |
 | **Add AI to any project** | from **$1,500** | Easy upsell / standalone; matches "AI audit + roadmap" entry pricing, opens the door to retainers. |
-| **Care plan** | from **$75/mo** | Recurring revenue; within the $50–$500/mo maintenance norm. The compounding part of the business. |
+| **Care & updates** | from **$39/mo**, or **$99 one-time** | Recurring revenue (within the $50–$500/mo maintenance norm) plus a low-friction one-time option for pay-as-you-go changes. The compounding part of the business. |
 
 **Strategy:** lead conversations toward **Grow** (anchored as most chosen) and **always offer the
 care plan** — recurring revenue is what turns a freelance grind into a studio. Use **Bespoke** to
