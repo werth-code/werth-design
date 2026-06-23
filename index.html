@@ -40,6 +40,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400..600&family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..420&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="stylesheet" href="assets/chatbot.css" />
 
   <!-- ============== SEO: STRUCTURED DATA ============== -->
   <script type="application/ld+json">
@@ -49,7 +50,7 @@
     "name": "Werth Design",
     "description": "Web design, AI implementation, and legacy & memorial archive websites for small businesses, creators, and families.",
     "url": "https://werth-code.github.io/werth-design/",
-    "image": "https://werth-code.github.io/werth-design/assets/og-image.svg",
+    "image": "https://werth-code.github.io/werth-design/assets/og-image.png",
     "founder": { "@type": "Person", "name": "Matthew Werth" },
     "email": "matthewwerth@gmail.com",
     "priceRange": "$$",
@@ -195,148 +196,201 @@
     </div>
   </section>
 
+  <!-- ====================== WHO IT'S FOR ====================== -->
+  <section class="who" id="who" aria-labelledby="who-title">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <p class="kicker"><span class="kicker-no">No. 02</span> Who it's for</p>
+        <h2 class="section-title" id="who-title">Built for the businesses that keep a town&nbsp;running.</h2>
+        <p class="section-sub">If you live on phone calls, walk-ins, and word of mouth — and you're losing some of it to a website that doesn't pull its weight — that's exactly who I build for. In Wilmington, the Brandywine Valley, and beyond.</p>
+      </header>
+
+      <ul class="who-grid">
+        <li class="who-card reveal">
+          <span class="who-icon" aria-hidden="true">
+            <svg viewBox="0 0 40 40"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 20 L20 8 L34 20"/><path d="M9 17 V32 H31 V17"/><path d="M17 32 V24 H23 V32"/>
+            </g></svg>
+          </span>
+          <h3>Home &amp; trade services</h3>
+          <p>HVAC, plumbing, electrical, landscaping, auto. Stop sending after-hours calls to voicemail — <strong>book the job while you're still on the last one.</strong></p>
+        </li>
+        <li class="who-card reveal">
+          <span class="who-icon" aria-hidden="true">
+            <svg viewBox="0 0 40 40"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="12" r="4"/><circle cx="11" cy="28" r="4"/><path d="M14 15 L31 30"/><path d="M14 25 L31 10"/>
+            </g></svg>
+          </span>
+          <h3>Salons, clinics &amp; care</h3>
+          <p>Hair, barber, dental, chiro, med spa. Online booking and automatic reminders that <strong>keep the chairs full and cut the no-shows.</strong></p>
+        </li>
+        <li class="who-card reveal">
+          <span class="who-icon" aria-hidden="true">
+            <svg viewBox="0 0 40 40"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 6 V18 a4 4 0 0 1 -8 0 V6"/><path d="M8 6 V20 M8 20 V34"/><path d="M30 6 c-4 0 -6 4 -6 9 s2 7 6 7 V6 Z"/><path d="M30 22 V34"/>
+            </g></svg>
+          </span>
+          <h3>Restaurants &amp; food</h3>
+          <p>Cafés, bakeries, caterers, wineries. A fast menu, online orders, and reservations — so you <strong>win the phone-in-hand crowd.</strong></p>
+        </li>
+        <li class="who-card reveal">
+          <span class="who-icon" aria-hidden="true">
+            <svg viewBox="0 0 40 40"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="6" y="13" width="28" height="20" rx="2"/><path d="M15 13 V10 a2 2 0 0 1 2 -2 h6 a2 2 0 0 1 2 2 V13"/><path d="M6 22 h28"/>
+            </g></svg>
+          </span>
+          <h3>Professional services</h3>
+          <p>Law, accounting, insurance, real estate. A credible site and an <strong>AI intake that books the clients worth your time.</strong></p>
+        </li>
+        <li class="who-card reveal">
+          <span class="who-icon" aria-hidden="true">
+            <svg viewBox="0 0 40 40"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 16 L9 8 H31 L33 16"/><path d="M7 16 a4 4 0 0 0 8 0 a4 4 0 0 0 8 0 a4 4 0 0 0 8 0"/><path d="M9 18 V32 H31 V18"/>
+            </g></svg>
+          </span>
+          <h3>Creators &amp; shops</h3>
+          <p>Artists, authors, makers. A storefront that <strong>sells while you create</strong> — like Laurie's prints and the wine guide above.</p>
+        </li>
+        <li class="who-card reveal">
+          <span class="who-icon" aria-hidden="true">
+            <svg viewBox="0 0 40 40"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="6" y="9" width="28" height="7" rx="1"/><path d="M9 16 V32 H31 V16"/><path d="M16 22 h8"/>
+            </g></svg>
+          </span>
+          <h3>A life's work</h3>
+          <p>Churches, societies, families, retiring pros. A searchable, lasting home for <strong>sermons, scholarship, and history.</strong></p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
   <!-- ====================== WORK ====================== -->
   <section class="work" id="work" aria-labelledby="work-title">
     <div class="wrap">
       <header class="section-head reveal">
-        <p class="kicker"><span class="kicker-no">No. 02</span> Selected work</p>
-        <h2 class="section-title" id="work-title">Six things I built, and what each one is&nbsp;for.</h2>
-        <p class="section-sub">A pastor. A scholar. An artist. A driving school. A wine writer. A trading desk. Different worlds — the same care.</p>
+        <p class="kicker"><span class="kicker-no">No. 03</span> Selected work</p>
+        <h2 class="section-title" id="work-title">See exactly what you're&nbsp;buying.</h2>
+        <p class="section-sub">A pastor. A scholar. An artist. A coach for teachers. A wine writer. A trading desk. Different worlds — the same care. Tap any one to open the real, live site.</p>
       </header>
 
       <ul class="plates">
         <!-- 1 -->
-        <li class="card reveal" data-cat="Legacy">
-          <div class="card-top">
-            <span class="card-no">01</span>
-            <span class="card-cat">Legacy · Audio archive</span>
-          </div>
-          <div class="card-motif" aria-hidden="true">
-            <svg viewBox="0 0 80 80"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
-              <path d="M40 18 C30 12 18 12 12 16 V58 C18 54 30 54 40 60" />
-              <path d="M40 18 C50 12 62 12 68 16 V58 C62 54 50 54 40 60" />
-              <line x1="40" y1="18" x2="40" y2="60" />
-              <path d="M52 30 q7 8 0 18" opacity="0.7"/>
-              <path d="M58 25 q12 13 0 28" opacity="0.45"/>
-            </g></svg>
-          </div>
-          <h3 class="card-name">Pastor Jack Werth</h3>
-          <p class="card-desc">A lifetime in the pulpit, made searchable. <strong>641 expository sermons</strong> with streaming audio, AI word-synced transcripts you can tap to seek, playlists, and inline scripture. A life's work, kept whole.</p>
-          <div class="card-foot">
-            <span class="tags">Legacy · AI transcription · Audio</span>
-            <a class="card-link" href="https://pastorjackwerth.org" target="_blank" rel="noopener">Visit <span aria-hidden="true">↗</span></a>
+        <li class="card reveal">
+          <a class="card-shot" href="https://pastorjackwerth.org" target="_blank" rel="noopener" aria-label="Visit Pastor Jack Werth">
+            <img src="assets/screenshots/pastorjackwerth.jpg" alt="Screenshot of pastorjackwerth.org — a gold-on-black sermon library homepage showing 641 sermons" loading="lazy" width="1300" height="874" />
+            <span class="card-visit">Visit site <span aria-hidden="true">↗</span></span>
+          </a>
+          <div class="card-body">
+            <div class="card-top">
+              <span class="card-no">01</span>
+              <span class="card-cat">Legacy · Audio archive</span>
+            </div>
+            <h3 class="card-name">Pastor Jack Werth</h3>
+            <p class="card-desc">A lifetime in the pulpit, made searchable. <strong>641 expository sermons</strong> with streaming audio, AI word-synced transcripts you can tap to seek, playlists, and inline scripture. A life's work, kept whole.</p>
+            <div class="card-foot">
+              <span class="tags">Legacy · AI transcription · Audio</span>
+              <a class="card-link" href="https://pastorjackwerth.org" target="_blank" rel="noopener">Visit <span aria-hidden="true">↗</span></a>
+            </div>
           </div>
         </li>
 
         <!-- 2 -->
-        <li class="card reveal" data-cat="Legacy">
-          <div class="card-top">
-            <span class="card-no">02</span>
-            <span class="card-cat">Legacy · Scholarship</span>
-          </div>
-          <div class="card-motif" aria-hidden="true">
-            <svg viewBox="0 0 80 80"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 20 h30 a8 8 0 0 1 8 8 v34 a6 6 0 0 1 -6 6 H28 a6 6 0 0 1 -6 -6 Z"/>
-              <path d="M22 20 a8 8 0 0 0 -8 8 a6 6 0 0 0 6 6 h2"/>
-              <line x1="30" y1="34" x2="50" y2="34" opacity="0.6"/>
-              <line x1="30" y1="42" x2="50" y2="42" opacity="0.6"/>
-              <line x1="30" y1="50" x2="44" y2="50" opacity="0.6"/>
-            </g></svg>
-          </div>
-          <h3 class="card-name">Thomas F. McDaniel</h3>
-          <p class="card-desc">Fifty years of biblical scholarship, rescued from a dying format. A 1990s frameset rebuilt into a fast, responsive archive of <strong>154 books and papers</strong> — readable on any device, indexed for the next generation.</p>
-          <div class="card-foot">
-            <span class="tags">Legacy · Static rebuild · Archive</span>
-            <a class="card-link" href="https://werth-code.github.io/tmcdaniel/" target="_blank" rel="noopener">Visit <span aria-hidden="true">↗</span></a>
+        <li class="card reveal">
+          <a class="card-shot" href="https://werth-code.github.io/tmcdaniel/" target="_blank" rel="noopener" aria-label="Visit the Thomas F. McDaniel archive">
+            <img src="assets/screenshots/tmcdaniel.jpg" alt="Screenshot of the Thomas F. McDaniel biblical philology archive homepage" loading="lazy" width="1300" height="874" />
+            <span class="card-visit">Visit site <span aria-hidden="true">↗</span></span>
+          </a>
+          <div class="card-body">
+            <div class="card-top">
+              <span class="card-no">02</span>
+              <span class="card-cat">Legacy · Scholarship</span>
+            </div>
+            <h3 class="card-name">Thomas F. McDaniel</h3>
+            <p class="card-desc">Fifty years of biblical scholarship, rescued from a dying format. A 1990s frameset rebuilt into a fast, responsive archive of <strong>154 books and papers</strong> — readable on any device, indexed for the next generation.</p>
+            <div class="card-foot">
+              <span class="tags">Legacy · Static rebuild · Archive</span>
+              <a class="card-link" href="https://werth-code.github.io/tmcdaniel/" target="_blank" rel="noopener">Visit <span aria-hidden="true">↗</span></a>
+            </div>
           </div>
         </li>
 
         <!-- 3 -->
-        <li class="card reveal" data-cat="Creator">
-          <div class="card-top">
-            <span class="card-no">03</span>
-            <span class="card-cat">Creator · Shop</span>
-          </div>
-          <div class="card-motif" aria-hidden="true">
-            <svg viewBox="0 0 80 80"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="16" y="16" width="48" height="48" rx="2"/>
-              <path d="M40 56 C40 44 34 36 26 32 C34 32 40 38 40 44 C40 36 46 28 56 26 C50 34 44 40 40 48 Z"/>
-              <line x1="40" y1="56" x2="40" y2="44" opacity="0.7"/>
-            </g></svg>
-          </div>
-          <h3 class="card-name">Laurie Werth Prints</h3>
-          <p class="card-desc">An artist's catalog that sells while she paints. A botanical-and-landscape <strong>print shop</strong> with a gallery, her story, and a clean path to buy — built so the art comes first and the buying is easy.</p>
-          <div class="card-foot">
-            <span class="tags">E-commerce · Portfolio · Artist</span>
-            <a class="card-link" href="https://werth-code.github.io/laurie-werth-prints/#shop" target="_blank" rel="noopener">Visit <span aria-hidden="true">↗</span></a>
+        <li class="card reveal">
+          <a class="card-shot" href="https://werth-code.github.io/laurie-werth-prints/" target="_blank" rel="noopener" aria-label="Visit Laurie Werth Prints">
+            <img src="assets/screenshots/laurie-prints.jpg" alt="Screenshot of Laurie Werth Prints — a botanical art print shop homepage" loading="lazy" width="1300" height="874" />
+            <span class="card-visit">Visit site <span aria-hidden="true">↗</span></span>
+          </a>
+          <div class="card-body">
+            <div class="card-top">
+              <span class="card-no">03</span>
+              <span class="card-cat">Creator · Shop</span>
+            </div>
+            <h3 class="card-name">Laurie Werth Prints</h3>
+            <p class="card-desc">An artist's catalog that sells while she paints. A botanical-and-landscape <strong>print shop</strong> with a gallery, her story, and a clean path to buy — built so the art comes first and the buying is easy.</p>
+            <div class="card-foot">
+              <span class="tags">E-commerce · Portfolio · Artist</span>
+              <a class="card-link" href="https://werth-code.github.io/laurie-werth-prints/#shop" target="_blank" rel="noopener">Visit <span aria-hidden="true">↗</span></a>
+            </div>
           </div>
         </li>
 
         <!-- 4 -->
-        <li class="card reveal" data-cat="Business">
-          <div class="card-top">
-            <span class="card-no">04</span>
-            <span class="card-cat">Business · Funnel</span>
-          </div>
-          <div class="card-motif" aria-hidden="true">
-            <svg viewBox="0 0 80 80"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="40" cy="40" r="26"/>
-              <path d="M40 40 L52 28 L46 46 L28 52 Z"/>
-              <line x1="40" y1="14" x2="40" y2="20"/>
-              <line x1="40" y1="60" x2="40" y2="66"/>
-              <line x1="14" y1="40" x2="20" y2="40"/>
-              <line x1="60" y1="40" x2="66" y2="40"/>
-            </g></svg>
-          </div>
-          <h3 class="card-name">Maryland Wine Compass</h3>
-          <p class="card-desc">A passion turned into a product. A <strong>76-winery</strong> travel directory engineered as an SEO funnel — discovery, maps, and a clear path to buy the guidebook behind it.</p>
-          <div class="card-foot">
-            <span class="tags">Local SEO · Directory · Sales funnel</span>
-            <a class="card-link" href="https://werth-code.github.io/maryland-wine-compass/index.html" target="_blank" rel="noopener">Visit <span aria-hidden="true">↗</span></a>
+        <li class="card reveal">
+          <a class="card-shot" href="https://werth-code.github.io/maryland-wine-compass/index.html" target="_blank" rel="noopener" aria-label="Visit Maryland Wine Compass">
+            <img src="assets/screenshots/maryland-wine.jpg" alt="Screenshot of Maryland Wine Compass — a burgundy wine travel guide homepage" loading="lazy" width="1300" height="874" />
+            <span class="card-visit">Visit site <span aria-hidden="true">↗</span></span>
+          </a>
+          <div class="card-body">
+            <div class="card-top">
+              <span class="card-no">04</span>
+              <span class="card-cat">Business · Funnel</span>
+            </div>
+            <h3 class="card-name">Maryland Wine Compass</h3>
+            <p class="card-desc">A passion turned into a product. A <strong>76-winery</strong> travel directory engineered as an SEO funnel — discovery, maps, and a clear path to buy the guidebook behind it.</p>
+            <div class="card-foot">
+              <span class="tags">Local SEO · Directory · Sales funnel</span>
+              <a class="card-link" href="https://werth-code.github.io/maryland-wine-compass/index.html" target="_blank" rel="noopener">Visit <span aria-hidden="true">↗</span></a>
+            </div>
           </div>
         </li>
 
         <!-- 5 -->
-        <li class="card reveal" data-cat="Business">
-          <div class="card-top">
-            <span class="card-no">05</span>
-            <span class="card-cat">Business · Membership</span>
-          </div>
-          <div class="card-motif" aria-hidden="true">
-            <svg viewBox="0 0 80 80"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="14" y="20" width="52" height="34" rx="3"/>
-              <path d="M35 30 L48 37 L35 44 Z" fill="currentColor" stroke="none"/>
-              <line x1="30" y1="62" x2="50" y2="62"/>
-              <line x1="40" y1="54" x2="40" y2="62"/>
-            </g></svg>
-          </div>
-          <h3 class="card-name">Ideal Instruction</h3>
-          <p class="card-desc">A driving school's video library, behind a paywall that actually works. A <strong>200+ lesson</strong> membership site with subscription tiers, gated content, and QA most small sites never get.</p>
-          <div class="card-foot">
-            <span class="tags">Memberships · Subscriptions · Video</span>
-            <a class="card-link" href="https://werth-code.github.io/ideal-instruction-preview/" target="_blank" rel="noopener">Visit <span aria-hidden="true">↗</span></a>
+        <li class="card reveal">
+          <a class="card-shot" href="https://werth-code.github.io/ideal-instruction-preview/" target="_blank" rel="noopener" aria-label="Visit Ideal Instruction">
+            <img src="assets/screenshots/ideal-instruction.jpg" alt="Screenshot of Ideal Instruction — an instructional-coaching video library homepage" loading="lazy" width="1300" height="874" />
+            <span class="card-visit">Visit site <span aria-hidden="true">↗</span></span>
+          </a>
+          <div class="card-body">
+            <div class="card-top">
+              <span class="card-no">05</span>
+              <span class="card-cat">Business · Membership</span>
+            </div>
+            <h3 class="card-name">Ideal Instruction</h3>
+            <p class="card-desc">Showing teachers what great looks like. An instructional-coaching platform with <strong>200+ real classroom video clips</strong>, membership gating, and district seats — wrapped in the kind of QA most small sites never get.</p>
+            <div class="card-foot">
+              <span class="tags">Membership · Video library · Education</span>
+              <a class="card-link" href="https://werth-code.github.io/ideal-instruction-preview/" target="_blank" rel="noopener">Visit <span aria-hidden="true">↗</span></a>
+            </div>
           </div>
         </li>
 
         <!-- 6 -->
-        <li class="card reveal" data-cat="Product">
-          <div class="card-top">
-            <span class="card-no">06</span>
-            <span class="card-cat">Product · Web app</span>
-          </div>
-          <div class="card-motif" aria-hidden="true">
-            <svg viewBox="0 0 80 80"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="24" y1="34" x2="24" y2="50"/><rect x="20" y="38" width="8" height="9"/>
-              <line x1="40" y1="26" x2="40" y2="54"/><rect x="36" y="32" width="8" height="14"/>
-              <line x1="56" y1="30" x2="56" y2="52"/><rect x="52" y="36" width="8" height="11"/>
-              <path d="M16 60 L30 48 L44 56 L64 30" opacity="0.55"/>
-            </g></svg>
-          </div>
-          <h3 class="card-name">TAPE</h3>
-          <p class="card-desc">A trading-desk tool that fits in your pocket. A mobile-first <strong>stock watchlist</strong> with an editorial-terminal look, live market data, and a build that installs like a native app.</p>
-          <div class="card-foot">
-            <span class="tags">Web app · Live data · PWA</span>
-            <a class="card-link" href="https://werth-code.github.io/tape/" target="_blank" rel="noopener">Visit <span aria-hidden="true">↗</span></a>
+        <li class="card reveal">
+          <a class="card-shot" href="https://werth-code.github.io/tape/" target="_blank" rel="noopener" aria-label="Visit TAPE">
+            <img src="assets/screenshots/tape.jpg" alt="Screenshot of TAPE — a mobile-first stock watchlist web app shown in a phone mockup" loading="lazy" width="1300" height="874" />
+            <span class="card-visit">Visit site <span aria-hidden="true">↗</span></span>
+          </a>
+          <div class="card-body">
+            <div class="card-top">
+              <span class="card-no">06</span>
+              <span class="card-cat">Product · Web app</span>
+            </div>
+            <h3 class="card-name">TAPE</h3>
+            <p class="card-desc">A trading-desk tool that fits in your pocket. A mobile-first <strong>stock watchlist</strong> with an editorial-terminal look, live market data, and a build that installs like a native app.</p>
+            <div class="card-foot">
+              <span class="tags">Web app · Live data · PWA</span>
+              <a class="card-link" href="https://werth-code.github.io/tape/" target="_blank" rel="noopener">Visit <span aria-hidden="true">↗</span></a>
+            </div>
           </div>
         </li>
       </ul>
@@ -347,7 +401,7 @@
   <section class="services" id="services" aria-labelledby="services-title">
     <div class="wrap">
       <header class="section-head reveal">
-        <p class="kicker"><span class="kicker-no">No. 03</span> What I do</p>
+        <p class="kicker"><span class="kicker-no">No. 04</span> What I do</p>
         <h2 class="section-title" id="services-title">Three things, done&nbsp;properly.</h2>
         <p class="section-sub">Most studios either design pretty things that don't work, or build working things that look terrible. I do both — and I sweat the part that comes after launch.</p>
       </header>
@@ -380,6 +434,9 @@
             <li>Content &amp; transcription tooling</li>
           </ul>
           <p class="svc-proof">Proof, not hype: a <strong>98.8%-accurate</strong> recognition model, ML energy forecasting, and an automated transcription pipeline — all shipped.</p>
+          <button type="button" class="svc-demo" data-open-chat>
+            <span class="svc-demo-dot" aria-hidden="true"></span> Try one live — chat with my demo assistant
+          </button>
         </article>
 
         <article class="svc reveal">
@@ -403,7 +460,7 @@
   <section class="pricing" id="pricing" aria-labelledby="pricing-title">
     <div class="wrap">
       <header class="section-head reveal">
-        <p class="kicker"><span class="kicker-no">No. 04</span> Pricing</p>
+        <p class="kicker"><span class="kicker-no">No. 05</span> Pricing</p>
         <h2 class="section-title" id="pricing-title">Plain prices. Fixed quotes. No&nbsp;surprises.</h2>
         <p class="section-sub">Every project gets a fixed price before a line of code is written. These are starting points — you'll get a real number after a 30-minute conversation.</p>
       </header>
@@ -472,7 +529,7 @@
   <section class="process" id="process" aria-labelledby="process-title">
     <div class="wrap">
       <header class="section-head reveal">
-        <p class="kicker"><span class="kicker-no">No. 05</span> How it works</p>
+        <p class="kicker"><span class="kicker-no">No. 06</span> How it works</p>
         <h2 class="section-title" id="process-title">Four steps. No&nbsp;mystery.</h2>
       </header>
       <ol class="steps">
@@ -514,7 +571,7 @@
         <p class="about-stamp">Est. 2026 · Wilmington, DE</p>
       </div>
       <div class="about-copy reveal">
-        <p class="kicker"><span class="kicker-no">No. 06</span> About</p>
+        <p class="kicker"><span class="kicker-no">No. 07</span> About</p>
         <h2 class="section-title" id="about-title">A real person, in Wilmington, who actually&nbsp;finishes.</h2>
         <p>I'm <strong>Matthew Werth</strong>. I build websites and AI tools — fast, and finished. I've built for a pastor, a scholar, an artist, a driving school, and a wine writer, which means I'm equally at home preserving a legacy and helping a business get more calls.</p>
         <p>The thing that sets my work apart isn't a secret stack — it's care. One of my sites went through an eight-pass automated audit before it ever launched. I'd rather ship something right than something fast, though I usually manage both.</p>
@@ -528,7 +585,7 @@
   <section class="faq" id="faq" aria-labelledby="faq-title">
     <div class="wrap">
       <header class="section-head reveal">
-        <p class="kicker"><span class="kicker-no">No. 07</span> Questions</p>
+        <p class="kicker"><span class="kicker-no">No. 08</span> Questions</p>
         <h2 class="section-title" id="faq-title">The things people ask&nbsp;first.</h2>
       </header>
       <div class="faq-list">
@@ -564,7 +621,7 @@
   <section class="contact" id="contact" aria-labelledby="contact-title">
     <div class="wrap contact-grid">
       <div class="contact-intro reveal">
-        <p class="kicker"><span class="kicker-no">No. 08</span> Start a project</p>
+        <p class="kicker"><span class="kicker-no">No. 09</span> Start a project</p>
         <h2 class="section-title" id="contact-title">Tell me what you're trying to&nbsp;build.</h2>
         <p>Whether it's a site that gets you more customers, an AI assistant that saves you hours, or a home for a life's work — I'd like to hear about it. I read every message myself.</p>
         <ul class="contact-points">
@@ -655,6 +712,46 @@
   </div>
 </footer>
 
+<!-- ====================== AI CHAT DEMO ====================== -->
+<div class="wren" id="wren">
+  <button class="wren-launch" id="wren-launch" aria-expanded="false" aria-controls="wren-panel" aria-label="Open the studio assistant">
+    <span class="wren-launch-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.5L3 20.5l1.5-5.4A8.5 8.5 0 1 1 21 11.5Z"/>
+        <path d="M8.5 10.5h7M8.5 13.5h4.5"/>
+      </svg>
+    </span>
+    <span class="wren-launch-label">Ask the studio</span>
+    <span class="wren-launch-dot" aria-hidden="true"></span>
+  </button>
+
+  <section class="wren-panel" id="wren-panel" role="dialog" aria-modal="false" aria-labelledby="wren-title" hidden>
+    <header class="wren-head">
+      <span class="wren-avatar" aria-hidden="true">W</span>
+      <div class="wren-id">
+        <p class="wren-name" id="wren-title">Wren <span class="wren-badge">AI demo</span></p>
+        <p class="wren-sub"><span class="wren-status-dot" aria-hidden="true"></span> Werth Design's studio assistant</p>
+      </div>
+      <button class="wren-close" id="wren-close" aria-label="Close chat">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </header>
+
+    <div class="wren-log" id="wren-log" role="log" aria-live="polite"></div>
+
+    <div class="wren-quick" id="wren-quick" aria-label="Suggested questions"></div>
+
+    <form class="wren-form" id="wren-form" autocomplete="off">
+      <input class="wren-input" id="wren-input" type="text" placeholder="Type a message…" aria-label="Type a message to Wren" maxlength="280" />
+      <button class="wren-send" type="submit" aria-label="Send">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l16-7-7 16-2.5-6.5L4 12Z"/></svg>
+      </button>
+    </form>
+    <p class="wren-foot">A live demo of the kind of assistant I build for clients.</p>
+  </section>
+</div>
+
 <script src="assets/main.js" defer></script>
+<script src="assets/chatbot.js" defer></script>
 </body>
 </html>
