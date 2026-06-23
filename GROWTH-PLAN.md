@@ -196,20 +196,23 @@ the AI offering trustworthy.
 
 ## 6. Pricing rationale
 
-Tiers shown on the site, with the reasoning (all within 2026 market ranges, positioned as
-solo-studio value vs. agency overhead):
+Tiers shown on the site. Pricing is deliberately **aggressive — set to undercut local agencies and
+Wix/Squarespace-plus-a-freelancer quotes and win volume**, then grow accounts via AI add-ons and
+care retainers (the recurring revenue is where the margin compounds):
 
 | Package | Price | Why this number |
 |---|---|---|
-| **Launch** | from **$1,800** | Bottom of the credible custom range ($1.5k–$8k freelance). Approachable entry for ICP 1/3; filters out $300-template shoppers. |
-| **Grow** | from **$4,500** | Mid custom range; bundles a site *and* one AI feature — the differentiator. This is the target sale and the "Most chosen" anchor. |
-| **Bespoke** | from **$2,500** | Legacy archives, apps, full AI builds. "From" floor anchors value; real number set per project (AI builds reach $10k–$25k per market data). |
-| **Add AI to any project** | from **$1,500** | Easy upsell / standalone; matches "AI audit + roadmap" entry pricing, opens the door to retainers. |
-| **Care & updates** | from **$39/mo**, or **$99 one-time** | Recurring revenue (within the $50–$500/mo maintenance norm) plus a low-friction one-time option for pay-as-you-go changes. The compounding part of the business. |
+| **Launch** | from **$899** | Aggressive entry — below most local quotes, removes price as an objection for a first project, gets a foot in the door. |
+| **Grow** | from **$2,499** | The target sale and "Most chosen" anchor — a converting site **with an AI chat assistant included** (the spearhead, bundled so it's a no-brainer). |
+| **Life's work** | from **$499** | Low floor for a simple legacy/memorial site; bigger archives priced to the project. The differentiator, made approachable. |
+| **Already have a site?** | from **$299** | Productized entry for the huge "I already have a site" market: SEO + competitor analysis + AI integration, no rebuild. Pairs with the free-audit funnel as the paid next step. |
+| **Custom AI** | contact | Assistants/automations/full systems beyond the included chat — quoted per project (market AI builds run $5k–$25k), so no fixed number anchors it low. |
+| **Care & updates** | from **$39/mo**, or **$99 one-time** | Recurring revenue + a low-friction one-time option. The compounding part of the business. |
 
-**Strategy:** lead conversations toward **Grow** (anchored as most chosen) and **always offer the
-care plan** — recurring revenue is what turns a freelance grind into a studio. Use **Bespoke** to
-say yes to the dream legacy projects without underpricing them.
+**Strategy:** low entry prices remove the objection and win the first project; **the money is in the
+ladder** — free audit → $299 existing-site tune-up → Grow ($2,499 w/ AI) → Custom AI → care retainer.
+Lead conversations toward **Grow** (AI included = the differentiator bundled in), and **always offer
+the care plan**. Watch margin on Launch/Life's-work at these floors — scope tightly and upsell.
 
 ---
 

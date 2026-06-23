@@ -352,7 +352,7 @@ section { padding-block: clamp(3rem, 5.5vw, 5.25rem); }
 .price-list strong { color: var(--ink); }
 .price-btn { justify-content: center; }
 
-.price-addons { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; margin-top: 1.4rem; }
+.price-addons { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; margin-top: 1.4rem; }
 .addon { border: 1px dashed var(--hairline); border-radius: var(--radius); padding: 1.3rem 1.5rem; display: grid; grid-template-columns: auto auto; gap: 0.3rem 1rem; align-items: baseline; }
 .addon-label { font-family: var(--font-display); font-size: 1.2rem; font-weight: 460; }
 .addon-price { font-family: var(--font-mono); font-size: 0.82rem; color: var(--oxblood); justify-self: end; }
