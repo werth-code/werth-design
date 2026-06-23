@@ -30,14 +30,15 @@
   position: absolute; right: 0; bottom: 0;
   width: min(384px, calc(100vw - 2rem));
   height: min(580px, 76vh);
-  display: flex; flex-direction: column;
+  display: none; flex-direction: column;        /* closed by default, regardless of [hidden] */
   background: var(--paper);
   border: 1px solid var(--hairline);
   border-radius: 16px; overflow: hidden;
   box-shadow: 0 40px 80px -30px rgba(31,27,22,0.55), 0 0 0 1px rgba(31,27,22,0.04);
   transform-origin: bottom right;
-  animation: wren-in 0.32s var(--ease) both;
 }
+.wren-panel[hidden] { display: none; }
+.wren-open .wren-panel { display: flex; animation: wren-in 0.32s var(--ease) both; }
 @keyframes wren-in { from { opacity: 0; transform: translateY(12px) scale(0.97); } to { opacity: 1; transform: none; } }
 
 /* header */
