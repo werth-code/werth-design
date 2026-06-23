@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f3ecdf"/>
+      <stop offset="1" stop-color="#e6ddc9"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- faint ruled-paper lines -->
+  <g stroke="#1f1b16" stroke-opacity="0.05">
+    <line x1="0" y1="158" x2="1200" y2="158"/>
+    <line x1="0" y1="315" x2="1200" y2="315"/>
+    <line x1="0" y1="472" x2="1200" y2="472"/>
+  </g>
+
+  <!-- catalog frame -->
+  <rect x="44" y="44" width="1112" height="542" fill="none" stroke="#1f1b16" stroke-opacity="0.18"/>
+  <path d="M64 64 h26 M64 64 v26" stroke="#8a2b22" stroke-width="2.5"/>
+  <path d="M1136 64 h-26 M1136 64 v26" stroke="#8a2b22" stroke-width="2.5"/>
+  <path d="M64 566 h26 M64 566 v-26" stroke="#8a2b22" stroke-width="2.5"/>
+  <path d="M1136 566 h-26 M1136 566 v-26" stroke="#8a2b22" stroke-width="2.5"/>
+
+  <text x="84" y="128" font-family="'Courier New', monospace" font-size="20" letter-spacing="7" fill="#6b6253">NO. 01 — WERTH DESIGN · WILMINGTON, DE</text>
+
+  <text x="80" y="296" font-family="Georgia, 'Times New Roman', serif" font-size="96" font-weight="500" fill="#1f1b16" letter-spacing="-2">Websites worth keeping.</text>
+  <text x="80" y="404" font-family="Georgia, 'Times New Roman', serif" font-size="96" font-style="italic" font-weight="500" fill="#8a2b22" letter-spacing="-2">AI that earns its keep.</text>
+
+  <text x="84" y="512" font-family="Georgia, serif" font-size="29" fill="#4a4339">Web design&#160;&#160;·&#160;&#160;AI implementation&#160;&#160;·&#160;&#160;Legacy &amp; memorial archives</text>
+
+  <!-- seal -->
+  <g transform="translate(1034,486)">
+    <circle r="62" fill="#f3ecdf" stroke="#8a2b22" stroke-width="2.5"/>
+    <circle r="50" fill="none" stroke="#a6803f" stroke-width="1" opacity="0.75"/>
+    <text y="22" text-anchor="middle" font-family="Georgia, serif" font-size="62" font-weight="700" fill="#1f1b16">W</text>
+  </g>
+</svg>
