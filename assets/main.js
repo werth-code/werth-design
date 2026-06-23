@@ -63,15 +63,17 @@
 
   /* ---- animated count-up for proof numbers ---- */
   function animateCount(el) {
-    var target = parseInt(el.getAttribute("data-count"), 10);
+    var target = parseFloat(el.getAttribute("data-count"));
+    var decimals = parseInt(el.getAttribute("data-decimals") || "0", 10);
     var suffix = el.getAttribute("data-suffix") || "";
-    if (reduceMotion || isNaN(target)) { el.textContent = target + suffix; return; }
+    function fmt(v) { return v.toLocaleString(undefined, { minimumFractionDigits: decimals, maximumFractionDigits: decimals }); }
+    if (reduceMotion || isNaN(target)) { el.textContent = fmt(target || 0) + suffix; return; }
     var start = performance.now();
     var dur = 1400;
     function tick(now) {
       var p = Math.min((now - start) / dur, 1);
       var eased = 1 - Math.pow(1 - p, 3);
-      el.textContent = Math.round(target * eased).toLocaleString() + (p === 1 ? suffix : "");
+      el.textContent = fmt(target * eased) + (p === 1 ? suffix : "");
       if (p < 1) requestAnimationFrame(tick);
     }
     requestAnimationFrame(tick);
