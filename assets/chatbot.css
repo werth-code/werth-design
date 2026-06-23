@@ -64,7 +64,7 @@
   padding: 0.15em 0.5em; border-radius: 100px;
 }
 .wren-sub { font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.04em; color: rgba(241,235,223,0.6); margin-top: 0.2rem; display: flex; align-items: center; gap: 0.45em; }
-.wren-status-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--sage); box-shadow: 0 0 0 2px color-mix(in srgb, var(--sage) 30%, transparent); }
+.wren-status-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 2px color-mix(in srgb, var(--green) 35%, transparent); }
 .wren-close { color: rgba(241,235,223,0.7); padding: 0.3rem; border-radius: 8px; transition: color 0.2s, background 0.2s; }
 .wren-close:hover { color: var(--paper); background: rgba(241,235,223,0.1); }
 
