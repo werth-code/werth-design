@@ -1,7 +1,8 @@
-/* Wren — Werth Design's demo studio assistant.
+/* Raven — Werth Design's demo studio assistant.
    A scripted, on-device assistant (no API key, safe for static hosting) that
    answers from the site's real content and can capture a lead to Formspree.
-   It is honestly presented as a DEMO of the kind of assistant Matthew builds. */
+   It is honestly presented as a DEMO of the kind of assistant Matthew builds.
+   (Internal class/id prefix remains `wren-`; the user-facing name is Raven.) */
 (function () {
   "use strict";
 
@@ -64,7 +65,7 @@
       chips: ["See the work", "Start a project"] }
   ];
 
-  var GREETING = "Hi! I'm <strong>Wren</strong>, the studio's assistant. I can talk pricing, what Matthew builds, AI tools, or get your project to him. What can I help with?";
+  var GREETING = "Hi! I'm <strong>Raven</strong>, the studio's assistant. I can talk pricing, what Matthew builds, AI tools, or get your project to him. What can I help with?";
   var DEFAULT_CHIPS = ["What do you build?", "How much?", "Do you do AI?", "See the work", "Start a project"];
   var LEAD_TRIGGERS = ["start a project", "start", "quote", "book", "hire", "interested", "get started", "work with", "reach out", "contact", "email me", "call me", "sign me up", "let's go", "lets go", "i want", "i need", "yes please"];
 
@@ -247,5 +248,5 @@
   document.querySelectorAll("[data-open-chat]").forEach(function (b) {
     b.addEventListener("click", function (e) { e.preventDefault(); open(); });
   });
-  window.WrenChat = { open: open, close: close };
+  window.RavenChat = window.WrenChat = { open: open, close: close };
 })();

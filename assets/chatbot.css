@@ -29,7 +29,9 @@
 .wren-panel {
   position: absolute; right: 0; bottom: 0;
   width: min(384px, calc(100vw - 2rem));
+  height: auto;
   max-height: min(560px, 78vh);                 /* content-sized, capped — no empty space */
+  padding: 0;                                   /* override the global `section` padding-block */
   display: none; flex-direction: column;        /* closed by default, regardless of [hidden] */
   background: var(--paper);
   border: 1px solid var(--hairline);
