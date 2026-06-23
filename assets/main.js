@@ -71,21 +71,6 @@
     counters.forEach(animateCount);
   }
 
-  /* ---- subtle parallax tilt on the hero specimen plate ---- */
-  var plate = document.querySelector(".plate-frame");
-  if (plate && !reduceMotion && window.matchMedia("(pointer:fine)").matches) {
-    var host = document.querySelector(".hero");
-    host.addEventListener("mousemove", function (ev) {
-      var r = host.getBoundingClientRect();
-      var x = (ev.clientX - r.left) / r.width - 0.5;
-      var y = (ev.clientY - r.top) / r.height - 0.5;
-      plate.style.transform = "rotate(1.4deg) rotateY(" + (x * 6).toFixed(2) + "deg) rotateX(" + (-y * 5).toFixed(2) + "deg)";
-    });
-    host.addEventListener("mouseleave", function () {
-      plate.style.transform = "rotate(1.4deg)";
-    });
-  }
-
   /* ---- contact form: Formspree if configured, else mailto fallback ---- */
   var form = document.querySelector(".contact-form");
   if (form) {
