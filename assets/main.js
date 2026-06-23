@@ -126,10 +126,12 @@
         ev.preventDefault();
         var type = form.querySelector("#type").value;
         var budget = form.querySelector("#budget").value;
+        var website = (form.querySelector("#website") || {}).value || "";
         var subject = "Project inquiry — " + type;
         var body =
           "Name: " + name.value + "\n" +
           "Email: " + email.value + "\n" +
+          "Website: " + (website || "—") + "\n" +
           "Project: " + type + "\n" +
           "Budget: " + budget + "\n\n" +
           message.value;

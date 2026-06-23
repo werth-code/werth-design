@@ -88,11 +88,6 @@ body::before {
   display: flex; align-items: center; gap: 0.85em;
   margin-bottom: 1.4rem;
 }
-.kicker-no {
-  color: var(--oxblood);
-  border: 1px solid color-mix(in srgb, var(--oxblood) 40%, transparent);
-  padding: 0.18em 0.55em; border-radius: 100px; letter-spacing: 0.12em;
-}
 .section-head { max-width: 56ch; margin-bottom: clamp(2.5rem, 5vw, 4rem); }
 .section-title {
   font-family: var(--font-display);
@@ -127,8 +122,8 @@ body::before {
   border: 1px solid var(--hairline); color: var(--ink); background: transparent;
 }
 .btn-ghost:hover { border-color: var(--ink); transform: translateY(-2px); background: color-mix(in srgb, var(--ink) 4%, transparent); }
-.btn-audit { border: 1px solid color-mix(in srgb, var(--green) 50%, var(--hairline)); color: var(--ink); background: color-mix(in srgb, var(--green) 8%, transparent); }
-.btn-audit:hover { border-color: var(--green); background: color-mix(in srgb, var(--green) 14%, transparent); transform: translateY(-2px); }
+.btn-audit { border: 1px solid color-mix(in srgb, var(--oxblood) 45%, var(--hairline)); color: var(--oxblood); background: transparent; }
+.btn-audit:hover { border-color: var(--oxblood); background: color-mix(in srgb, var(--oxblood) 6%, transparent); transform: translateY(-2px); }
 
 /* ---------------- header ---------------- */
 .site-header {
@@ -302,7 +297,6 @@ section { padding-block: clamp(3rem, 5.5vw, 5.25rem); }
 
 /* ---------------- services ---------------- */
 .services .kicker { color: rgba(241,235,223,0.6); }
-.services .kicker-no { color: var(--brass-lt); border-color: color-mix(in srgb, var(--brass-lt) 45%, transparent); }
 .services .section-sub { color: rgba(241,235,223,0.66); }
 .svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
 .svc {
@@ -447,7 +441,6 @@ section { padding-block: clamp(3rem, 5.5vw, 5.25rem); }
 .contact { background: var(--night); color: var(--paper); }
 .contact-grid { display: grid; grid-template-columns: 0.95fr 1.05fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: start; }
 .contact .kicker { color: rgba(241,235,223,0.6); }
-.contact .kicker-no { color: var(--brass-lt); border-color: color-mix(in srgb, var(--brass-lt) 45%, transparent); }
 .contact-intro p { color: rgba(241,235,223,0.74); margin-top: 1.1rem; max-width: 44ch; }
 .contact-points { display: flex; flex-direction: column; gap: 0.7rem; margin: 1.8rem 0; }
 .contact-points li { display: flex; align-items: center; gap: 0.8em; font-family: var(--font-mono); font-size: 0.84rem; color: var(--paper); }
@@ -461,6 +454,7 @@ section { padding-block: clamp(3rem, 5.5vw, 5.25rem); }
 .field { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1.1rem; }
 .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; }
 .field label { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(241,235,223,0.66); }
+.field-opt { text-transform: none; letter-spacing: 0; color: rgba(241,235,223,0.4); }
 .field input, .field select, .field textarea {
   background: rgba(0,0,0,0.18); border: 1px solid rgba(241,235,223,0.18); border-radius: var(--radius);
   color: var(--paper); font-family: var(--font-text); font-size: 1rem; padding: 0.78em 0.9em; width: 100%;
