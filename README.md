@@ -3,8 +3,8 @@
 A portfolio + sales site for **Werth Design** — web design, AI implementation, and legacy /
 memorial archive websites. Static, dependency-free, and built to host on **GitHub Pages for $0/mo**.
 
-The full go-to-market strategy (audience, channels, SEO, brand voice, funnel, pricing) lives in
-[`GROWTH-PLAN.md`](GROWTH-PLAN.md).
+Sales/strategy notes (go-to-market plan, prospect lists) are kept **out of this public repo** in a
+gitignored `private/` folder.
 
 ---
 
@@ -24,8 +24,7 @@ werth-design/
 ├── robots.txt
 ├── sitemap.xml
 ├── .nojekyll             # tells GitHub Pages to serve files as-is
-├── GROWTH-PLAN.md        # the sales/marketing strategy
-└── TARGETS.md            # prospect hit-list of real local businesses + outreach templates
+└── private/              # gitignored — strategy & prospect notes, never published
 ```
 
 **Wren, the AI chat demo:** a scripted, on-device assistant (no API key, safe for static
