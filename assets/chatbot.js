@@ -247,7 +247,7 @@
         if (done) return; done = true; clearTimeout(timer); t.remove();
         var reply = res.ok && res.d && res.d.reply ? String(res.d.reply) : "";
         if (reply) {
-          addMsg("bot", escapeHtml(reply).replace(/\n/g, "<br>"));
+          addMsg("bot", escapeHtml(reply).replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>").replace(/\n/g, "<br>"));
           convo.push({ role: "assistant", content: reply });
           setChips(DEFAULT_CHIPS);
         } else {
