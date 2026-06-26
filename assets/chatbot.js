@@ -83,6 +83,11 @@
       chips: ["Start a project", "How much?", "See the work"] }
   ];
 
+  // Claude-backed brain (Cloudflare Worker). Open questions go here; the KB below
+  // is the offline fallback if the Worker is unreachable or rate-limited.
+  var WORKER_URL = "https://werth-chatbot.werthdesign.workers.dev";
+  var convo = []; // running Claude conversation: [{role, content}, ...]
+
   var GREETING = "Hi! I'm <strong>Raven</strong>, the studio's assistant. I can talk pricing, what Matthew builds, AI tools, or get your project to him. What can I help with?";
   var DEFAULT_CHIPS = ["How much?", "Do you do AI?", "I already have a site", "Start a project"];
   var FALLBACK = "Good question — I'm a quick demo, so I might not have that exact one. I can talk <strong>pricing</strong>, <strong>websites &amp; AI</strong>, improving an <strong>existing site</strong>, the <strong>portfolio</strong>, or get your project to Matthew. What's most useful?";
@@ -226,6 +231,41 @@
     return bestScore > 0 ? best : null;
   }
 
+  // Ask the Claude-backed Worker; gracefully fall back to the scripted KB on any error.
+  function askClaude(text) {
+    convo.push({ role: "user", content: text });
+    if (convo.length > 24) convo = convo.slice(-24);
+    var t = typing(), done = false;
+    var timer = setTimeout(function () { if (!done) { done = true; t.remove(); fallbackAnswer(text); } }, 15000);
+    fetch(WORKER_URL, {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ messages: convo })
+    })
+      .then(function (r) { return r.json().then(function (d) { return { ok: r.ok, d: d }; }); })
+      .then(function (res) {
+        if (done) return; done = true; clearTimeout(timer); t.remove();
+        var reply = res.ok && res.d && res.d.reply ? String(res.d.reply) : "";
+        if (reply) {
+          addMsg("bot", escapeHtml(reply).replace(/\n/g, "<br>"));
+          convo.push({ role: "assistant", content: reply });
+          setChips(DEFAULT_CHIPS);
+        } else {
+          fallbackAnswer(text, res.d && res.d.error);
+        }
+      })
+      .catch(function () { if (!done) { done = true; clearTimeout(timer); t.remove(); fallbackAnswer(text); } });
+  }
+
+  // Offline fallback: scripted KB match, else a friendly catch-all.
+  function fallbackAnswer(text, errMsg) {
+    if (convo.length && convo[convo.length - 1].role === "user") convo.pop(); // keep history clean
+    var intent = matchIntent(text);
+    if (intent) { addMsg("bot", intent.a); setChips(intent.chips || DEFAULT_CHIPS); if (intent.act === "work") flashWork(); return; }
+    if (errMsg && /limit/i.test(errMsg)) { addMsg("bot", escapeHtml(errMsg)); setChips(DEFAULT_CHIPS); return; }
+    addMsg("bot", FALLBACK); setChips(DEFAULT_CHIPS);
+  }
+
   function handleUser(text) {
     text = (text || "").trim();
     if (!text) return;
@@ -236,13 +276,8 @@
 
     var t = norm(text);
     if (hasAny(t, STRONG_START)) { beginLead(); return; }          // 1) explicit "let's start" → capture now
-    var intent = matchIntent(text);
-    if (intent) {                                                   // 2) answer the question
-      botSay(intent.a, intent.chips || DEFAULT_CHIPS, intent.act === "work" ? flashWork : null);
-      return;
-    }
-    if (hasAny(t, SOFT_LEAD)) { beginLead(); return; }             // 3) "I'm interested" with no question → capture
-    botSay(FALLBACK, DEFAULT_CHIPS);                                // 4) helpful fallback
+    if (hasAny(t, SOFT_LEAD)) { beginLead(); return; }             // 2) "I'm interested" → capture now
+    askClaude(text);                                               // 3) everything else → Claude (scripted KB fallback on error)
   }
 
   function flashWork() {
