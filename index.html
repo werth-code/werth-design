@@ -39,7 +39,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400..600&family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..420&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="assets/styles.css?v=11" />
+  <link rel="stylesheet" href="assets/styles.css?v=12" />
   <link rel="stylesheet" href="assets/chatbot.css?v=6" />
 
   <!-- ============== SEO: STRUCTURED DATA ============== -->
@@ -122,6 +122,7 @@
 
     <nav class="nav" aria-label="Primary">
       <a href="#work">Work</a>
+      <a href="#tools">Tools</a>
       <a href="#services">Services</a>
       <a href="#pricing">Pricing</a>
       <a href="#process">Process</a>
@@ -137,6 +138,7 @@
   </div>
   <div class="mobile-nav" id="mobile-nav" hidden>
     <a href="#work">Work</a>
+    <a href="#tools">Tools</a>
     <a href="#services">Services</a>
     <a href="#pricing">Pricing</a>
     <a href="#process">Process</a>
@@ -393,6 +395,123 @@
             </div>
           </div>
         </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ====================== LIVE TOOLS ====================== -->
+  <section class="tools" id="tools" aria-labelledby="tools-title">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <p class="kicker">Live AI tools</p>
+        <h2 class="section-title" id="tools-title">Don't take my word for it — <span class="accent">try the&nbsp;AI.</span></h2>
+        <p class="section-sub">The same kinds of tools I build into client sites — live, and free to play with right now. Paste a review, upload a photo, rewrite a headline. This is AI doing a real job, not a parlor trick.</p>
+      </header>
+
+      <ul class="tools-grid">
+
+        <!-- Review Responder -->
+        <li class="tool-card reveal">
+          <span class="tool-icon" aria-hidden="true">
+            <svg viewBox="0 0 40 40"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 12 a3 3 0 0 1 3-3 h22 a3 3 0 0 1 3 3 v10 a3 3 0 0 1 -3 3 H17 l-6 5 v-5 H9 a3 3 0 0 1 -3-3 Z"/>
+              <path d="M19 14 l-4 3.5 4 3.5"/><path d="M15 17.5 h7 a4 4 0 0 1 4 4 v1"/>
+            </g></svg>
+          </span>
+          <p class="tool-cat">Text · Reputation</p>
+          <h3>Review Responder</h3>
+          <p>Paste a customer review — even a brutal one-star — and get a calm, professional reply you can post in seconds.</p>
+          <div class="tool-foot">
+            <span class="tool-live"><span class="dot" aria-hidden="true"></span>Live</span>
+            <a class="tool-link" href="tools/review-responder.html">Try it <span aria-hidden="true">→</span></a>
+          </div>
+        </li>
+
+        <!-- Headline Rewriter -->
+        <li class="tool-card reveal">
+          <span class="tool-icon" aria-hidden="true">
+            <svg viewBox="0 0 40 40"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 33 l2-7 L27 8 a2.6 2.6 0 0 1 3.7 3.7 L13 28 Z"/><path d="M24 11 l4 4"/>
+              <path d="M31 5 v4 M29 7 h4"/>
+            </g></svg>
+          </span>
+          <p class="tool-cat">Text · Copywriting</p>
+          <h3>Headline Rewriter</h3>
+          <p>Drop in your homepage headline and get three sharper versions that lead with what your customers actually care about.</p>
+          <div class="tool-foot">
+            <span class="tool-live"><span class="dot" aria-hidden="true"></span>Live</span>
+            <a class="tool-link" href="tools/headline.html">Try it <span aria-hidden="true">→</span></a>
+          </div>
+        </li>
+
+        <!-- Audio follow-along -->
+        <li class="tool-card reveal">
+          <span class="tool-icon" aria-hidden="true">
+            <svg viewBox="0 0 40 40"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 17 v6 M11 13 v14 M16 8 v24 M21 14 v12 M26 10 v20 M31 16 v8 M36 19 v2"/>
+            </g></svg>
+          </span>
+          <p class="tool-cat">Audio · Transcription</p>
+          <h3>Audio follow-along</h3>
+          <p>Press play on a sermon and the transcript lights up word by word — tap any line to jump straight to it. Built for pastorjackwerth.org.</p>
+          <div class="tool-foot">
+            <span class="tool-live"><span class="dot" aria-hidden="true"></span>Live</span>
+            <a class="tool-link" href="https://pastorjackwerth.org/sermons/" target="_blank" rel="noopener">Hear it <span aria-hidden="true">↗</span></a>
+          </div>
+        </li>
+
+        <!-- Palette Studio -->
+        <li class="tool-card reveal">
+          <span class="tool-icon" aria-hidden="true">
+            <svg viewBox="0 0 40 40"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 6 C11 6 5 12 5 20 c0 6 5 9 9 9 2.4 0 3.5-1.4 3.5-3.2 0-2.8 2-4 4.2-4 C32 21.6 36 17 36 12.8 36 8.6 28.8 6 20 6 Z"/>
+              <circle cx="13" cy="15.5" r="1.5"/><circle cx="20" cy="12.5" r="1.5"/><circle cx="27.5" cy="16" r="1.5"/>
+            </g></svg>
+          </span>
+          <p class="tool-cat">Vision · Color</p>
+          <h3>Palette Studio</h3>
+          <p>Upload any photo and AI pulls its palette, then matches each color to a real tube of paint — a buy-list and mixing kit in one.</p>
+          <div class="tool-foot">
+            <span class="tool-live"><span class="dot" aria-hidden="true"></span>Live</span>
+            <a class="tool-link" href="https://werth-code.github.io/laurie-werth-prints/palette.html" target="_blank" rel="noopener">Try it <span aria-hidden="true">↗</span></a>
+          </div>
+        </li>
+
+        <!-- Raven -->
+        <li class="tool-card reveal">
+          <span class="tool-icon" aria-hidden="true">
+            <svg viewBox="0 0 40 40"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 11 a3 3 0 0 1 3-3 h22 a3 3 0 0 1 3 3 v11 a3 3 0 0 1 -3 3 H18 l-7 6 v-6 H9 a3 3 0 0 1 -3-3 Z"/>
+              <circle cx="14" cy="16.5" r="1.4"/><circle cx="20" cy="16.5" r="1.4"/><circle cx="26" cy="16.5" r="1.4"/>
+            </g></svg>
+          </span>
+          <p class="tool-cat">Chat · Assistant</p>
+          <h3>Raven</h3>
+          <p>The assistant in the corner of this very site — it answers questions, ballparks pricing, and books a next step, powered by Claude.</p>
+          <div class="tool-foot">
+            <span class="tool-live"><span class="dot" aria-hidden="true"></span>Live</span>
+            <button class="tool-link" type="button" data-open-chat>Chat now <span aria-hidden="true">→</span></button>
+          </div>
+        </li>
+
+        <!-- Card scanner -->
+        <li class="tool-card reveal">
+          <span class="tool-icon" aria-hidden="true">
+            <svg viewBox="0 0 40 40"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 14 V10 a3 3 0 0 1 3-3 h4"/><path d="M27 7 h4 a3 3 0 0 1 3 3 v4"/>
+              <path d="M34 26 v4 a3 3 0 0 1 -3 3 h-4"/><path d="M13 33 H9 a3 3 0 0 1 -3-3 v-4"/>
+              <rect x="14" y="14" width="12" height="12" rx="1.5"/>
+            </g></svg>
+          </span>
+          <p class="tool-cat">Vision · iOS app</p>
+          <h3>Card scanner</h3>
+          <p>Point a phone at a trading card and AI names it in a heartbeat — 98.8% accurate across thousands of cards. The engine behind a native iOS app.</p>
+          <div class="tool-foot">
+            <span class="tool-stat">98.8% recognition</span>
+            <span class="tool-meta">Native iOS app</span>
+          </div>
+        </li>
+
       </ul>
     </div>
   </section>
@@ -791,6 +910,7 @@
     </div>
     <nav class="footer-nav" aria-label="Footer">
       <a href="#work">Work</a>
+      <a href="#tools">Tools</a>
       <a href="#services">Services</a>
       <a href="#pricing">Pricing</a>
       <a href="#about">About</a>
