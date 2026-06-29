@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..600&family=Newsreader:opsz,wght@6..72,320..440&family=Spline+Sans+Mono:wght@500&display=swap" rel="stylesheet" />
+<style>
+  * { margin: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 630px; }
+  body { background: #f1ebdf; color: #1f1b16; font-family: "Newsreader", Georgia, serif; position: relative; overflow: hidden; }
+  .edge { position: absolute; top: 0; left: 0; right: 0; height: 10px; background: linear-gradient(90deg, #8a2b22, #a6803f); }
+  .grain { position: absolute; inset: 0; background:
+      radial-gradient(circle at 88% 22%, rgba(166,128,63,.10), transparent 42%),
+      radial-gradient(circle at 12% 96%, rgba(138,43,34,.07), transparent 40%); }
+  .frame { position: absolute; inset: 0; padding: 60px 72px; display: flex; flex-direction: column; justify-content: space-between; }
+  .top { display: flex; align-items: center; gap: 16px; }
+  .seal { width: 56px; height: 56px; border-radius: 50%; background: #8a2b22; color: #f3ecdf; display: grid; place-items: center;
+          font-family: "Fraunces", serif; font-weight: 600; font-size: 31px; border: 2px solid #c2a061; }
+  .wm { font-family: "Fraunces", serif; font-weight: 600; font-size: 27px; letter-spacing: .01em; line-height: 1; }
+  .wm small { display: block; font-family: "Spline Sans Mono", monospace; font-weight: 500; font-size: 12px; letter-spacing: .28em;
+              color: #6b6253; text-transform: uppercase; margin-top: 5px; }
+  .mid { display: flex; align-items: center; gap: 50px; }
+  .copy { flex: 1; }
+  .pill { display: inline-flex; align-items: center; gap: 11px; font-family: "Spline Sans Mono", monospace; font-weight: 500;
+          font-size: 15px; letter-spacing: .16em; text-transform: uppercase; color: #2f9e5f; margin-bottom: 24px; }
+  .pill .dot { width: 11px; height: 11px; border-radius: 50%; background: #2f9e5f; }
+  .cat { font-family: "Spline Sans Mono", monospace; font-weight: 500; font-size: 16px; letter-spacing: .18em;
+         text-transform: uppercase; color: #8a2b22; margin-bottom: 16px; }
+  h1 { font-family: "Fraunces", serif; font-weight: 560; font-size: 74px; line-height: 1.0; letter-spacing: -.015em; }
+  .desc { font-size: 27px; line-height: 1.38; color: #4a4339; margin-top: 22px; max-width: 19ch; }
+  .icon { width: 192px; height: 192px; flex: none; border-radius: 32px; background: #8a2b22; color: #f6ede0;
+          display: grid; place-items: center; box-shadow: 0 32px 64px -30px rgba(31,27,22,.6); }
+  .icon svg { width: 108px; height: 108px; }
+  .bottom { display: flex; justify-content: space-between; align-items: center; font-family: "Spline Sans Mono", monospace;
+            font-weight: 500; font-size: 16px; letter-spacing: .04em; color: #6b6253; }
+  .bottom b { color: #1f1b16; font-weight: 500; }
+</style>
+</head>
+<body>
+  <div class="edge"></div>
+  <div class="grain"></div>
+  <div class="frame">
+    <div class="top"><div class="seal">W</div><div class="wm">Werth Design<small>Websites &amp; AI</small></div></div>
+    <div class="mid">
+      <div class="copy">
+        <div class="pill"><span class="dot"></span>Live AI tool</div>
+        <div class="cat" id="cat"></div>
+        <h1 id="name"></h1>
+        <div class="desc" id="desc"></div>
+      </div>
+      <div class="icon" id="icon"></div>
+    </div>
+    <div class="bottom"><span><b>werth.design</b>/tools</span><span>Powered by Claude</span></div>
+  </div>
+  <script>
+    var p = new URLSearchParams(location.search);
+    document.getElementById('cat').textContent = p.get('cat') || '';
+    document.getElementById('name').textContent = p.get('name') || '';
+    document.getElementById('desc').textContent = p.get('desc') || '';
+    var icons = {
+      review: '<svg viewBox="0 0 40 40"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 12 a3 3 0 0 1 3-3 h22 a3 3 0 0 1 3 3 v10 a3 3 0 0 1 -3 3 H17 l-6 5 v-5 H9 a3 3 0 0 1 -3-3 Z"/><path d="M19 14 l-4 3.5 4 3.5"/><path d="M15 17.5 h7 a4 4 0 0 1 4 4 v1"/></g></svg>',
+      headline: '<svg viewBox="0 0 40 40"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 33 l2-7 L27 8 a2.6 2.6 0 0 1 3.7 3.7 L13 28 Z"/><path d="M24 11 l4 4"/><path d="M31 5 v4 M29 7 h4"/></g></svg>'
+    };
+    document.getElementById('icon').innerHTML = icons[p.get('icon')] || '';
+  </script>
+</body>
+</html>
