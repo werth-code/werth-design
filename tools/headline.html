@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Headline Rewriter — a live AI tool by Werth Design</title>
+  <meta name="description" content="Paste your homepage headline and get three sharper, benefit-led versions in seconds. A live demo of the kind of copywriting AI Werth Design builds for local businesses." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Headline Rewriter — live AI tool by Werth Design" />
+  <meta property="og:description" content="Paste your homepage headline, get three sharper versions. Powered by Claude." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://werth.design/tools/headline.html" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..600&family=Newsreader:opsz,wght@6..72,300..500&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="tools.css" />
+</head>
+<body>
+  <header class="tool-top">
+    <a class="wm" href="/">Werth<span>.</span>Design</a>
+    <nav><a href="/#work">← Back to site</a></nav>
+  </header>
+
+  <main data-tool="headline">
+    <p class="eyebrow">Live AI tool · powered by Claude</p>
+    <h1>Headline Rewriter</h1>
+    <p class="lead">Paste your current homepage headline and get three sharper versions that lead with what your customers actually care about — clear, plain, and built to get more calls. It's the same instinct Matt brings to every site he writes.</p>
+
+    <div class="tool-card">
+      <label class="fld" for="toolInput">Your current headline (add your trade or town if you like)</label>
+      <textarea id="toolInput" placeholder="e.g. “Smith &amp; Sons Plumbing — Quality Service Since 1998”"></textarea>
+      <div class="tool-row">
+        <button class="ex" id="toolExample" type="button" data-fill="Acme Heating &amp; Cooling — Your Trusted HVAC Solutions Provider in Wilmington, DE">Try an example</button>
+        <button class="run" id="toolRun" type="button">Sharpen it</button>
+      </div>
+      <div class="out" id="toolOut">
+        <p class="out-label">Sharper options</p>
+        <div class="out-body" id="toolOutBody"></div>
+      </div>
+    </div>
+
+    <p class="note">Want a homepage that sounds this clear, start to finish? <a href="/#contact">Start a project →</a></p>
+  </main>
+
+  <footer class="tool-foot">
+    <span>A live demo by Werth Design · Wilmington, DE</span>
+    <span>werth.design</span>
+  </footer>
+  <script src="tools.js" defer></script>
+</body>
+</html>

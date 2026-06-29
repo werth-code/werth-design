@@ -1,0 +1,81 @@
+/* Werth Design — Live AI tool pages (shared, on-brand) */
+:root {
+  --paper:#f4f1ea; --card:#fffdf8; --ink:#1b1814; --oxblood:#8b2f2f;
+  --stone:#6f675c; --line:rgba(27,24,20,.13); --gold:#9a7b3f;
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+* { box-sizing:border-box; }
+html { -webkit-text-size-adjust:100%; }
+body {
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:"Newsreader",Georgia,serif; font-size:1.06rem; line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+a { color:var(--oxblood); text-decoration:none; }
+a:hover { text-decoration:underline; }
+
+.tool-top {
+  display:flex; align-items:center; justify-content:space-between;
+  max-width:980px; margin:0 auto; padding:1.3rem 1.5rem; border-bottom:1px solid var(--line);
+}
+.tool-top .wm { font-family:"Fraunces",serif; font-weight:600; font-size:1.15rem; color:var(--ink); }
+.tool-top .wm span { color:var(--oxblood); }
+.tool-top nav a { font-family:"Spline Sans Mono",monospace; font-size:.8rem; letter-spacing:.02em; color:var(--stone); }
+
+main { max-width:720px; margin:0 auto; padding:3rem 1.5rem 4rem; }
+.eyebrow {
+  font-family:"Spline Sans Mono",monospace; font-size:.72rem; letter-spacing:.18em;
+  text-transform:uppercase; color:var(--oxblood); margin:0 0 .8rem;
+}
+h1 {
+  font-family:"Fraunces",serif; font-weight:560; font-size:clamp(2rem,5vw,2.9rem);
+  line-height:1.05; margin:0 0 .7rem; letter-spacing:-.01em;
+}
+.lead { font-size:1.16rem; color:#36312b; margin:0 0 2rem; max-width:60ch; }
+
+.tool-card {
+  background:var(--card); border:1px solid var(--line); border-radius:16px;
+  padding:1.4rem; box-shadow:0 24px 50px -34px rgba(27,24,20,.4);
+}
+label.fld {
+  display:block; font-family:"Spline Sans Mono",monospace; font-size:.72rem;
+  letter-spacing:.05em; text-transform:uppercase; color:var(--stone); margin:0 0 .5rem;
+}
+textarea {
+  width:100%; min-height:130px; resize:vertical; background:#fff;
+  border:1px solid var(--line); border-radius:11px; padding:.85rem 1rem;
+  font-family:"Newsreader",Georgia,serif; font-size:1.04rem; line-height:1.5; color:var(--ink);
+}
+textarea:focus { outline:none; border-color:var(--oxblood); box-shadow:0 0 0 3px rgba(139,47,47,.12); }
+.tool-row { display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-top:.9rem; flex-wrap:wrap; }
+.ex {
+  font-family:"Spline Sans Mono",monospace; font-size:.78rem; color:var(--stone);
+  cursor:pointer; background:none; border:none; padding:0;
+}
+.ex:hover { color:var(--oxblood); text-decoration:underline; }
+button.run {
+  font-family:"Fraunces",serif; font-weight:600; font-size:1rem; color:#fff;
+  background:var(--oxblood); border:none; border-radius:100px; padding:.7em 1.5em; cursor:pointer;
+  transition:transform .15s var(--ease), opacity .15s;
+}
+button.run:hover { transform:translateY(-1px); }
+button.run:disabled { opacity:.6; cursor:default; transform:none; }
+
+.out {
+  margin-top:0; max-height:0; overflow:hidden; opacity:0; border-top:1px solid transparent;
+  transition:max-height .45s var(--ease), opacity .3s, padding .3s;
+}
+.out.show { max-height:1400px; opacity:1; padding-top:1.2rem; margin-top:1.2rem; border-top:1px solid var(--line); }
+.out-label { font-family:"Spline Sans Mono",monospace; font-size:.72rem; letter-spacing:.06em; text-transform:uppercase; color:var(--gold); margin:0 0 .5rem; }
+.out-body { font-size:1.08rem; line-height:1.65; }
+.out-body strong { font-weight:600; }
+
+.note { margin:2.2rem 0 0; font-size:1.02rem; color:var(--stone); }
+.note a { font-weight:500; }
+
+.tool-foot {
+  max-width:720px; margin:0 auto; padding:1.5rem; border-top:1px solid var(--line);
+  font-family:"Spline Sans Mono",monospace; font-size:.72rem; color:var(--stone);
+  display:flex; justify-content:space-between; flex-wrap:wrap; gap:.5rem;
+}
+@media (max-width:560px) { main { padding:2rem 1.1rem 3rem; } }

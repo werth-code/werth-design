@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Review Responder — a live AI tool by Werth Design</title>
+  <meta name="description" content="Paste a customer review and get a calm, professional reply drafted by AI in seconds. A live demo of the kind of tool Werth Design builds into local-business sites." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Review Responder — live AI tool by Werth Design" />
+  <meta property="og:description" content="Paste a customer review, get a professional reply in seconds. Powered by Claude." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://werth.design/tools/review-responder.html" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..600&family=Newsreader:opsz,wght@6..72,300..500&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="tools.css" />
+</head>
+<body>
+  <header class="tool-top">
+    <a class="wm" href="/">Werth<span>.</span>Design</a>
+    <nav><a href="/#work">← Back to site</a></nav>
+  </header>
+
+  <main data-tool="review-responder">
+    <p class="eyebrow">Live AI tool · powered by Claude</p>
+    <h1>Review Responder</h1>
+    <p class="lead">Paste a customer review — even a brutal one-star — and get a calm, professional reply you can post in seconds. The kind of AI Matt builds right into your site so a tough review never sits there unanswered.</p>
+
+    <div class="tool-card">
+      <label class="fld" for="toolInput">The review</label>
+      <textarea id="toolInput" placeholder="e.g. “Waited two weeks for a callback and never heard back. Really disappointed.”"></textarea>
+      <div class="tool-row">
+        <button class="ex" id="toolExample" type="button" data-fill="Two stars. The work itself was fine, but nobody told me the tech would show up three hours late, and I had to call twice just to find out what was going on. Communication needs a lot of work.">Try an example</button>
+        <button class="run" id="toolRun" type="button">Draft a reply</button>
+      </div>
+      <div class="out" id="toolOut">
+        <p class="out-label">Suggested reply</p>
+        <div class="out-body" id="toolOutBody"></div>
+      </div>
+    </div>
+
+    <p class="note">Want tools like this built into <em>your</em> site? <a href="/#contact">Start a project →</a></p>
+  </main>
+
+  <footer class="tool-foot">
+    <span>A live demo by Werth Design · Wilmington, DE</span>
+    <span>werth.design</span>
+  </footer>
+  <script src="tools.js" defer></script>
+</body>
+</html>
