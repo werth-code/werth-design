@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Home Services Websites + AI That Answers Every Call — Wilmington, DE | Werth Design</title>
+<meta name="description" content="Fast websites and AI that answers every call for home & trade pros — HVAC, plumbing, electrical, roofing, landscaping — across Wilmington, the Brandywine Valley & South Jersey. Never lose a job to voicemail. Fixed prices from $899, no contracts." />
+<link rel="canonical" href="https://werth.design/for/home-services/" />
+<meta name="robots" content="index, follow" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://werth.design/for/home-services/" />
+<meta property="og:title" content="Never lose another job to a missed call — Websites + AI for the trades" />
+<meta property="og:description" content="Fast websites + AI that answers every call, texts back missed ones, and books the job at 2 a.m. For home & trade pros in Wilmington, the Brandywine Valley & South Jersey." />
+<meta property="og:image" content="https://werth.design/assets/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..500&family=Newsreader:opsz,wght@6..72,320..500&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/assets/chatbot.css?v=6" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Website design and AI phone/chat answering for home service businesses",
+  "provider": { "@type": "LocalBusiness", "name": "Werth Design", "areaServed": ["Wilmington DE","Brandywine Valley","Chester County PA","South Jersey","Greater Philadelphia"], "url": "https://werth.design", "email": "matt@werth.design" },
+  "audience": { "@type": "Audience", "audienceType": "HVAC, plumbing, electrical, roofing, landscaping and other home & trade services" },
+  "offers": { "@type": "Offer", "priceCurrency": "USD", "price": "899", "description": "Starter website from $899; website with AI answering from $2,499. Fixed price, no contracts." }
+}
+</script>
+<style>
+  :root{
+    --paper:#f1ebdf; --paper-2:#ece4d4; --paper-deep:#e6ddc9; --card:#fbf7ee;
+    --ink:#1f1b16; --ink-soft:#4a4339; --ink-faint:#6b6253;
+    --oxblood:#8a2b22; --oxblood-dk:#6e2019; --brass:#a6803f; --brass-lt:#c2a061; --green:#2f9e5f;
+    --night:#1b1814; --hair:rgba(31,27,22,.16); --hair-2:rgba(31,27,22,.09);
+    --disp:"Fraunces",Georgia,serif; --text:"Newsreader",Georgia,serif; --mono:"Spline Sans Mono",ui-monospace,monospace;
+    --ease:cubic-bezier(.2,.65,.2,1);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+  body{background:var(--paper);color:var(--ink);font-family:var(--text);font-size:clamp(1.02rem,.5vw+.95rem,1.14rem);line-height:1.62;font-weight:380;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 clamp(1.2rem,4vw,3rem);}
+  a{color:var(--oxblood);text-decoration:none;} a:hover{text-decoration:underline;}
+  strong{font-weight:560;color:inherit;}
+  h1,h2,h3{font-family:var(--disp);letter-spacing:-.015em;line-height:1.03;}
+  .btn{display:inline-flex;align-items:center;gap:.5em;font-family:var(--mono);font-size:.86rem;letter-spacing:.02em;font-weight:500;padding:.9em 1.5em;border-radius:100px;cursor:pointer;border:1px solid transparent;transition:transform .15s var(--ease),background .2s;text-decoration:none;}
+  .btn:hover{transform:translateY(-1px);text-decoration:none;}
+  .btn-cta{background:var(--oxblood);color:#f6ede0;}
+  .btn-cta:hover{background:var(--oxblood-dk);}
+  .btn-ghost{background:transparent;color:var(--ink);border-color:var(--hair);}
+  .btn-ghost:hover{border-color:var(--oxblood);color:var(--oxblood);}
+  .kicker{font-family:var(--mono);font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--oxblood);}
+
+  /* header */
+  header.lp{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--paper) 90%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--hair);}
+  .lp-head{display:flex;align-items:center;justify-content:space-between;height:64px;}
+  .brand{display:flex;align-items:center;gap:.6rem;color:var(--ink);}
+  .brand:hover{text-decoration:none;}
+  .seal{width:38px;height:38px;border-radius:50%;background:var(--oxblood);color:#f3ecdf;display:grid;place-items:center;font-family:var(--disp);font-weight:600;font-size:1.25rem;border:1.5px solid var(--brass-lt);}
+  .brand b{font-family:var(--disp);font-weight:600;font-size:1.12rem;}
+  .brand small{display:block;font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);}
+
+  /* hero */
+  .hero{padding:clamp(2.6rem,6vw,4.6rem) 0 clamp(2rem,4vw,3rem);}
+  .hero h1{font-weight:560;font-size:clamp(2.4rem,6vw,4.1rem);max-width:16ch;}
+  .hero h1 em{color:var(--oxblood);font-style:italic;font-weight:500;}
+  .hero .sub{font-size:clamp(1.14rem,1.7vw,1.34rem);color:var(--ink-soft);margin-top:1.3rem;max-width:56ch;}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.9rem;}
+  .trust-line{font-family:var(--mono);font-size:.76rem;letter-spacing:.02em;color:var(--ink-faint);margin-top:1.6rem;}
+  .trust-line b{color:var(--ink);font-weight:500;}
+  .trust-line .sep{color:var(--brass);margin:0 .45rem;}
+
+  /* pain band */
+  .pain{background:var(--night);color:var(--paper);padding:clamp(2.4rem,5vw,3.6rem) 0;}
+  .pain h2{color:#fff;font-weight:520;font-size:clamp(1.6rem,3vw,2.2rem);max-width:20ch;}
+  .pain h2 em{color:var(--brass-lt);font-style:italic;font-weight:500;}
+  .pain-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem;margin-top:1.8rem;}
+  .pain-stat .n{font-family:var(--disp);font-weight:560;font-size:clamp(1.9rem,3.4vw,2.7rem);color:var(--brass-lt);line-height:1;}
+  .pain-stat .l{margin-top:.5rem;font-size:.95rem;color:rgba(241,235,223,.78);line-height:1.35;}
+
+  /* sections */
+  section{padding:clamp(2.8rem,5.5vw,4.4rem) 0;}
+  .section-head{max-width:56ch;margin-bottom:clamp(1.8rem,3vw,2.6rem);}
+  .section-head h2{font-weight:520;font-size:clamp(1.7rem,3.4vw,2.5rem);margin:.5rem 0 .5rem;}
+  .section-head p{color:var(--ink-soft);}
+
+  /* feature list */
+  .feat{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;}
+  .fcard{background:var(--card);border:1px solid var(--hair);border-radius:12px;padding:1.4rem 1.5rem;transition:transform .3s var(--ease),box-shadow .3s;}
+  .fcard:hover{transform:translateY(-3px);box-shadow:0 22px 44px -34px rgba(31,27,22,.5);}
+  .fcard .ic{width:42px;height:42px;border-radius:10px;border:1px solid var(--hair);color:var(--oxblood);display:grid;place-items:center;margin-bottom:.9rem;}
+  .fcard .ic svg{width:22px;height:22px;}
+  .fcard h3{font-weight:520;font-size:1.22rem;}
+  .fcard p{color:var(--ink-soft);font-size:.99rem;margin-top:.4rem;}
+
+  /* proof */
+  .proof-box{background:var(--card);border:1px solid var(--hair);border-radius:16px;padding:clamp(1.6rem,3vw,2.4rem);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.4rem;}
+  .proof-box .t{max-width:44ch;}
+  .proof-box h3{font-weight:520;font-size:1.5rem;}
+  .proof-box p{color:var(--ink-soft);margin-top:.4rem;}
+  .proof-box .acts{display:flex;flex-wrap:wrap;gap:.7rem;}
+
+  /* why / trust cards */
+  .why{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;}
+  .wcard{padding:1.3rem 1.4rem;border:1px solid var(--hair);border-radius:12px;background:var(--paper);}
+  .wcard h3{font-weight:520;font-size:1.14rem;color:var(--oxblood);}
+  .wcard p{color:var(--ink-soft);font-size:.97rem;margin-top:.35rem;}
+
+  /* pricing */
+  .price-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;max-width:760px;}
+  .price{background:var(--card);border:1px solid var(--hair);border-radius:14px;padding:1.6rem 1.7rem;position:relative;}
+  .price.best{border-color:color-mix(in srgb,var(--oxblood) 42%,var(--hair));box-shadow:0 24px 50px -36px rgba(31,27,22,.5);}
+  .price .flag{position:absolute;top:-.7rem;left:1.7rem;font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;background:var(--oxblood);color:#f6ede0;padding:.3em .7em;border-radius:100px;}
+  .price .nm{font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);}
+  .price .amt{font-family:var(--disp);font-weight:560;font-size:2.3rem;margin:.3rem 0 .2rem;}
+  .price .amt span{font-size:.8rem;font-family:var(--mono);color:var(--ink-faint);font-weight:400;}
+  .price .for{color:var(--ink-soft);}
+  .price ul{list-style:none;margin:1rem 0 1.3rem;}
+  .price li{position:relative;padding-left:1.4rem;margin:.5rem 0;font-size:.98rem;color:var(--ink-soft);}
+  .price li::before{content:"✓";position:absolute;left:0;color:var(--green);font-family:var(--mono);font-size:.85rem;}
+  .price li strong{color:var(--ink);}
+
+  /* faq */
+  .faq details{border-bottom:1px solid var(--hair);padding:1.1rem 0;}
+  .faq summary{font-family:var(--disp);font-weight:500;font-size:1.16rem;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:1rem;}
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary::after{content:"+";color:var(--brass);font-family:var(--mono);transition:transform .2s;}
+  .faq details[open] summary::after{content:"–";}
+  .faq details p{color:var(--ink-soft);margin-top:.7rem;max-width:64ch;}
+
+  /* final cta + form */
+  .final{background:var(--night);color:var(--paper);border-radius:18px;padding:clamp(2rem,4vw,3.2rem);position:relative;overflow:hidden;}
+  .final::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,var(--oxblood),var(--brass));}
+  .final h2{color:#fff;font-weight:520;font-size:clamp(1.7rem,3.4vw,2.5rem);max-width:20ch;}
+  .final p{color:rgba(241,235,223,.82);margin-top:.7rem;max-width:52ch;}
+  .aform{margin-top:1.6rem;display:grid;grid-template-columns:1fr 1fr;gap:.7rem;max-width:620px;}
+  .aform input{background:rgba(241,235,223,.08);border:1px solid rgba(241,235,223,.22);border-radius:11px;padding:.8rem 1rem;font-family:var(--text);font-size:1rem;color:#fff;}
+  .aform input::placeholder{color:rgba(241,235,223,.5);}
+  .aform input:focus{outline:none;border-color:var(--brass-lt);}
+  .aform .full{grid-column:1 / -1;}
+  .aform button{grid-column:1 / -1;justify-content:center;}
+  .aform-ok{grid-column:1 / -1;color:var(--brass-lt);font-family:var(--mono);font-size:.9rem;}
+
+  footer.lp{padding:2.6rem 0 3.4rem;border-top:1px solid var(--hair);margin-top:clamp(2.5rem,5vw,4rem);font-family:var(--mono);font-size:.74rem;color:var(--ink-faint);display:flex;flex-wrap:wrap;justify-content:space-between;gap:.8rem;}
+  footer.lp a{color:var(--ink-faint);}
+
+  @media (max-width:820px){
+    .pain-grid{grid-template-columns:1fr 1fr;}
+    .feat,.why,.price-grid,.aform{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<header class="lp">
+  <div class="wrap lp-head">
+    <a class="brand" href="/"><span class="seal">W</span><span><b>Werth Design</b><small>Websites &amp; AI</small></span></a>
+    <a class="btn btn-cta" href="#audit">Get a free audit</a>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <p class="kicker">For home &amp; trade pros · Wilmington · Brandywine Valley · South Jersey</p>
+      <h1>Never lose another job to a <em>missed call.</em></h1>
+      <p class="sub">I build fast websites — with AI that <strong>answers every call, texts back the ones you miss, and books the job at 2&nbsp;a.m.</strong> — for HVAC, plumbing, electrical, roofing &amp; landscaping pros. So the work you earned doesn't ring through to the next guy.</p>
+      <div class="hero-cta">
+        <a class="btn btn-cta" href="#audit">Get a free audit <span aria-hidden="true">→</span></a>
+        <button class="btn btn-ghost" type="button" data-open-chat>Hear the AI answer</button>
+      </div>
+      <p class="trust-line"><b>Fixed prices from $899</b><span class="sep">·</span>No contracts<span class="sep">·</span>You own everything<span class="sep">·</span>A real person in Wilmington</p>
+    </div>
+  </section>
+
+  <!-- PAIN -->
+  <section class="pain">
+    <div class="wrap">
+      <h2>A missed call isn't a missed call. It's a booked job — <em>for someone else.</em></h2>
+      <div class="pain-grid">
+        <div class="pain-stat"><div class="n">1 in 5</div><div class="l">Shops that answer a new lead within the hour. Be the one that always does.</div></div>
+        <div class="pain-stat"><div class="n">78%</div><div class="l">Of customers hire whoever calls them back first.</div></div>
+        <div class="pain-stat"><div class="n">74%</div><div class="l">Of trade websites have no FAQ; 65% don't list hours; 43% don't list service areas.</div></div>
+        <div class="pain-stat"><div class="n">$0</div><div class="l">What a voicemail books while you're up a ladder.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE FIX -->
+  <section id="fix">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">The fix</p>
+        <h2>What I build for the trades.</h2>
+        <p>Every piece maps to a job you're currently losing — not a feature nobody asked for.</p>
+      </div>
+      <div class="feat">
+        <div class="fcard">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h2l2 5-2 1a12 12 0 0 0 5 5l1-2 5 2v2a2 2 0 0 1-2 2A16 16 0 0 1 4 5Z"/></svg></span>
+          <h3>24/7 AI call &amp; chat answering</h3>
+          <p>Every call and website chat answered, day or night. It books the job or takes the details — so nothing ever goes to voicemail again.</p>
+        </div>
+        <div class="fcard">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H8l-4 3V5Z"/><path d="M8 10h8M8 13h5"/></svg></span>
+          <h3>Missed-call text-back</h3>
+          <p>Can't grab it? The caller instantly gets a friendly “we'll be right with you” text — before they thumb down to the next contractor.</p>
+        </div>
+        <div class="fcard">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h14v18l-7-4-7 4V3Z"/><path d="M9 8h6M9 11h6"/></svg></span>
+          <h3>Instant quote &amp; lead forms</h3>
+          <p>Turn a homeowner scrolling at 11 p.m. into a booked estimate in your inbox — with the details you need to price it.</p>
+        </div>
+        <div class="fcard">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg></span>
+          <h3>One-tap mobile site</h3>
+          <p>Your customer is on a phone with a problem. A fast, click-to-call site gets you on the line before they've compared three others.</p>
+        </div>
+        <div class="fcard">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-7-10a7 7 0 0 1 14 0c0 5.5-7 10-7 10Z"/><circle cx="12" cy="11" r="2.4"/></svg></span>
+          <h3>Service-area &amp; FAQ pages</h3>
+          <p>Answer the questions — and rank for the towns — before a customer even asks. Closes the exact gaps most trade sites leave wide open.</p>
+        </div>
+        <div class="fcard">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.5 5.5L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-.5Z"/></svg></span>
+          <h3>Reviews on autopilot</h3>
+          <p>Nudge happy customers for a Google review, and reply to every one with AI — 80% of people favor businesses that answer their reviews.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROOF -->
+  <section id="proof">
+    <div class="wrap">
+      <div class="proof-box">
+        <div class="t">
+          <p class="kicker">Don't take my word for it</p>
+          <h3>Talk to the AI right now.</h3>
+          <p>The assistant in the corner is the same kind I'd put on your phone and your site — ask it anything, or watch it turn a nasty 1-star review into a calm, professional reply.</p>
+        </div>
+        <div class="acts">
+          <button class="btn btn-cta" type="button" data-open-chat>Chat with the AI</button>
+          <a class="btn btn-ghost" href="/tools/review-responder.html">See Review Responder →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section id="why">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Why me</p>
+        <h2>Built like you'd want a contractor to work.</h2>
+        <p>You've been burned by agencies and buzzwords. So here's the deal, in plain English.</p>
+      </div>
+      <div class="why">
+        <div class="wcard"><h3>No contracts</h3><p>Cancel anytime. I earn the next month, every month.</p></div>
+        <div class="wcard"><h3>Fixed price, upfront</h3><p>You get a real number before I write a line of code. No surprises, no hourly meter.</p></div>
+        <div class="wcard"><h3>You own everything</h3><p>The site, the domain, the code — all yours. No hostage situations.</p></div>
+        <div class="wcard"><h3>A real person</h3><p>I'm Matt, in Wilmington. You text me, not a ticket queue in another time zone.</p></div>
+        <div class="wcard"><h3>Live in ~2–3 weeks</h3><p>Fast to launch. The AI answering can go live even sooner.</p></div>
+        <div class="wcard"><h3>Built to get found</h3><p>Fast, mobile-first, and set up for Google — so the phone actually rings.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Pricing</p>
+        <h2>Most studios start around $2,500. I start at $899.</h2>
+        <p>Same craft, none of the bloat. Fixed price, no contracts — a real quote after a quick call.</p>
+      </div>
+      <div class="price-grid">
+        <div class="price">
+          <p class="nm">Launch</p>
+          <p class="amt"><span>from</span> $899</p>
+          <p class="for">Get online, properly.</p>
+          <ul>
+            <li>Fast, mobile-first site built to convert</li>
+            <li>Click-to-call, quote form, service-area &amp; FAQ pages</li>
+            <li>Set up for Google + your Business Profile</li>
+            <li>Live in ~2–3 weeks</li>
+          </ul>
+          <a class="btn btn-ghost" href="#audit">Start here</a>
+        </div>
+        <div class="price best">
+          <span class="flag">Most chosen</span>
+          <p class="nm">Grow</p>
+          <p class="amt"><span>from</span> $2,499</p>
+          <p class="for">Never miss a job again.</p>
+          <ul>
+            <li>Everything in Launch</li>
+            <li><strong>24/7 AI answering + missed-call text-back</strong></li>
+            <li>Automated reviews + AI replies</li>
+            <li>Deeper SEO &amp; conversion design</li>
+          </ul>
+          <a class="btn btn-cta" href="#audit">Let's build it</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head"><p class="kicker">Straight answers</p><h2>The questions every owner asks.</h2></div>
+      <div class="faq">
+        <details open><summary>I already have a website.</summary><p>Good — send it over and I'll audit it free, then tell you exactly what's costing you calls. Often it's a fix, not a rebuild, and I'll say so honestly.</p></details>
+        <details><summary>Do I really need the AI?</summary><p>If you ever miss calls — on a job, after hours, on a weekend — then yes. It pays for itself the first job it saves from going to voicemail (and your competitor).</p></details>
+        <details><summary>How fast can this be live?</summary><p>A Launch site is typically ~2–3 weeks. The AI answering can often go live sooner, since it works alongside whatever site you have now.</p></details>
+        <details><summary>Any contracts or lock-in?</summary><p>None. Fixed price up front, month-to-month on anything ongoing, and you own the site, domain, and code outright.</p></details>
+        <details><summary>Where do you work?</summary><p>Websites for the trades across Wilmington, the Brandywine Valley, Chester County, and South Jersey. The AI tools I can set up for shops anywhere.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section id="audit">
+    <div class="wrap">
+      <div class="final">
+        <h2>Stop feeding jobs to voicemail.</h2>
+        <p>Tell me your trade and your site (if you have one). I'll send back a free, no-pressure audit of what's costing you calls — and what I'd fix first.</p>
+        <form class="aform" id="auditForm">
+          <input type="text" name="business" id="af-biz" placeholder="Business name" autocomplete="organization" required />
+          <input type="text" name="trade" id="af-trade" placeholder="Your trade (e.g. HVAC)" />
+          <input type="email" name="email" id="af-email" class="full" placeholder="Email or phone to reach you" autocomplete="email" required />
+          <input type="url" name="website" id="af-site" class="full" placeholder="Current website (optional)" />
+          <button class="btn btn-cta" type="submit">Get my free audit →</button>
+          <p class="aform-ok" id="af-ok" hidden>Got it — I'll be in touch within a day. Thanks for reaching out. ✦</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="lp">
+  <div class="wrap lp-head" style="height:auto;flex-wrap:wrap;">
+    <span>Werth Design · Wilmington, Delaware · <a href="mailto:matt@werth.design">matt@werth.design</a></span>
+    <span><a href="/">← Back to werth.design</a></span>
+  </div>
+</footer>
+
+<!-- ====================== AI CHAT DEMO (Raven) ====================== -->
+<div class="wren" id="wren">
+  <button class="wren-launch" id="wren-launch" aria-expanded="false" aria-controls="wren-panel" aria-label="Open the studio assistant">
+    <span class="wren-launch-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.5L3 20.5l1.5-5.4A8.5 8.5 0 1 1 21 11.5Z"/>
+        <path d="M8.5 10.5h7M8.5 13.5h4.5"/>
+      </svg>
+    </span>
+    <span class="wren-launch-label">Ask the studio</span>
+    <span class="wren-launch-dot" aria-hidden="true"></span>
+  </button>
+
+  <section class="wren-panel" id="wren-panel" role="dialog" aria-modal="false" aria-labelledby="wren-title" hidden>
+    <header class="wren-head">
+      <span class="wren-avatar" aria-hidden="true">R</span>
+      <div class="wren-id">
+        <p class="wren-name" id="wren-title">Raven <span class="wren-badge">AI demo</span></p>
+        <p class="wren-sub"><span class="wren-status-dot" aria-hidden="true"></span> Werth Design's studio assistant</p>
+      </div>
+      <button class="wren-close" id="wren-close" aria-label="Close chat">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </header>
+
+    <div class="wren-log" id="wren-log" role="log" aria-live="polite"></div>
+
+    <div class="wren-quick" id="wren-quick" aria-label="Suggested questions"></div>
+
+    <form class="wren-form" id="wren-form" autocomplete="off">
+      <input class="wren-input" id="wren-input" type="text" placeholder="Type a message…" aria-label="Type a message to Raven" maxlength="280" />
+      <button class="wren-send" type="submit" aria-label="Send">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l16-7-7 16-2.5-6.5L4 12Z"/></svg>
+      </button>
+    </form>
+    <p class="wren-foot">A live demo of the kind of assistant I build for clients.</p>
+  </section>
+</div>
+
+<script src="/assets/chatbot.js?v=13" defer></script>
+<script>
+  (function(){
+    var f = document.getElementById('auditForm');
+    if(!f) return;
+    f.addEventListener('submit', function(e){
+      e.preventDefault();
+      var biz=document.getElementById('af-biz').value.trim();
+      var email=document.getElementById('af-email').value.trim();
+      if(!biz||!email){ return; }
+      var btn=f.querySelector('button'); btn.disabled=true; btn.textContent='Sending…';
+      fetch('https://formspree.io/f/xeebokgb',{
+        method:'POST', headers:{'Accept':'application/json','Content-Type':'application/json'},
+        body: JSON.stringify({
+          _subject:'Home-services audit request: '+biz,
+          business:biz, trade:document.getElementById('af-trade').value.trim(),
+          email:email, website:document.getElementById('af-site').value.trim(),
+          source:'/for/home-services'
+        })
+      }).then(function(r){
+        if(r.ok){ ['af-biz','af-trade','af-email','af-site'].forEach(function(id){document.getElementById(id).style.display='none';}); btn.style.display='none'; document.getElementById('af-ok').hidden=false; }
+        else { btn.disabled=false; btn.textContent='Get my free audit →'; }
+      }).catch(function(){ btn.disabled=false; btn.textContent='Get my free audit →'; });
+    });
+  })();
+</script>
+</body>
+</html>
