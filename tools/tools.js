@@ -50,4 +50,29 @@
 
   if (btn) btn.addEventListener("click", run);
   if (ta) ta.addEventListener("keydown", function (e) { if ((e.metaKey || e.ctrlKey) && e.key === "Enter") run(); });
+
+  // ---- Lead capture → Formspree ----
+  var leadForm = document.getElementById("leadForm");
+  if (leadForm) {
+    var leadBtn = leadForm.querySelector("button");
+    var leadLabel = leadBtn ? leadBtn.textContent : "Send";
+    leadForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var input = document.getElementById("leadEmail");
+      var email = (input.value || "").trim();
+      if (!email) { input.focus(); return; }
+      leadBtn.disabled = true; leadBtn.textContent = "Sending…";
+      fetch("https://formspree.io/f/xeebokgb", {
+        method: "POST",
+        headers: { "Accept": "application/json", "Content-Type": "application/json" },
+        body: JSON.stringify({ email: email, _subject: "Tool-page lead: " + tool, tool: tool, message: "Lead captured from the " + tool + " tool page." })
+      }).then(function (r) {
+        if (r.ok) {
+          leadForm.querySelector(".lead-q").style.display = "none";
+          leadForm.querySelector(".lead-row").style.display = "none";
+          document.getElementById("leadOk").hidden = false;
+        } else { leadBtn.disabled = false; leadBtn.textContent = leadLabel; }
+      }).catch(function () { leadBtn.disabled = false; leadBtn.textContent = leadLabel; });
+    });
+  }
 })();

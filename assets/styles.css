@@ -295,6 +295,16 @@ section { padding-block: clamp(3rem, 5.5vw, 5.25rem); }
 .card-link { font-family: var(--font-mono); font-size: 0.74rem; letter-spacing: 0.04em; color: var(--oxblood); white-space: nowrap; transition: gap 0.3s; display: inline-flex; gap: 0.35em; }
 .card-link:hover { color: var(--oxblood-dk); gap: 0.6em; }
 
+/* ---------------- trust bar ---------------- */
+.trustbar { background: var(--night); color: var(--paper); }
+.trustbar-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.4rem 1.1rem; padding-block: 0.95rem; text-align: center; }
+.trustbar span { font-size: 0.92rem; color: rgba(241,235,223,0.82); }
+.trustbar strong { color: #fff; font-weight: 500; }
+.trustbar .tb-sep { color: var(--brass); }
+@media (max-width: 640px) { .trustbar .tb-sep { display: none; } .trustbar-inner { gap: 0.3rem 1rem; } }
+
+.who-flag { display: inline-block; font-family: var(--font-mono); font-size: 0.56rem; letter-spacing: 0.1em; text-transform: uppercase; color: #f6ede0; background: var(--oxblood); padding: 0.28em 0.6em; border-radius: 100px; vertical-align: middle; margin-left: 0.5rem; position: relative; top: -0.12em; }
+
 /* ---------------- live tools ---------------- */
 .tools-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; list-style: none; }
 .tool-card {

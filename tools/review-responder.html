@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..600&family=Newsreader:opsz,wght@6..72,300..500&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="tools.css" />
+  <link rel="stylesheet" href="tools.css?v=2" />
 </head>
 <body>
   <header class="tool-top">
@@ -44,13 +44,20 @@
       </div>
     </div>
 
-    <p class="note">Want tools like this built into <em>your</em> site? <a href="/#contact">Start a project →</a></p>
+    <form class="lead" id="leadForm">
+      <p class="lead-q">Want this working on <em>your</em> site? Drop your email — I'll show you what it'd look like.</p>
+      <div class="lead-row">
+        <input type="email" id="leadEmail" name="email" placeholder="you@yourbusiness.com" autocomplete="email" required />
+        <button type="submit" class="run">Show me →</button>
+      </div>
+      <p class="lead-ok" id="leadOk" hidden>Thanks — I'll be in touch shortly. ✦</p>
+    </form>
   </main>
 
   <footer class="tool-foot">
     <span>A live demo by Werth Design · Wilmington, DE</span>
     <span>werth.design</span>
   </footer>
-  <script src="tools.js" defer></script>
+  <script src="tools.js?v=2" defer></script>
 </body>
 </html>

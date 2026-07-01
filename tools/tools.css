@@ -73,6 +73,15 @@ button.run:disabled { opacity:.6; cursor:default; transform:none; }
 .note { margin:2.2rem 0 0; font-size:1.02rem; color:var(--stone); }
 .note a { font-weight:500; }
 
+/* lead capture */
+.lead { margin:2.2rem 0 0; padding:1.3rem 1.4rem; background:var(--card); border:1px solid var(--line); border-radius:14px; box-shadow:0 20px 44px -36px rgba(27,24,20,.4); }
+.lead-q { font-size:1.05rem; color:var(--ink); margin:0 0 .85rem; }
+.lead-q em { font-style:italic; }
+.lead-row { display:flex; gap:.6rem; flex-wrap:wrap; }
+.lead-row input { flex:1; min-width:210px; background:#fff; border:1px solid var(--line); border-radius:11px; padding:.72rem .95rem; font-family:"Newsreader",Georgia,serif; font-size:1rem; color:var(--ink); }
+.lead-row input:focus { outline:none; border-color:var(--oxblood); box-shadow:0 0 0 3px rgba(139,47,47,.12); }
+.lead-ok { color:var(--gold); font-size:1.02rem; margin:0; }
+
 .tool-foot {
   max-width:720px; margin:0 auto; padding:1.5rem; border-top:1px solid var(--line);
   font-family:"Spline Sans Mono",monospace; font-size:.72rem; color:var(--stone);
