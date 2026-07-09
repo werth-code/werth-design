@@ -304,6 +304,8 @@ section { padding-block: clamp(3rem, 5.5vw, 5.25rem); }
 @media (max-width: 640px) { .trustbar .tb-sep { display: none; } .trustbar-inner { gap: 0.3rem 1rem; } }
 
 .who-flag { display: inline-block; font-family: var(--font-mono); font-size: 0.56rem; letter-spacing: 0.1em; text-transform: uppercase; color: #f6ede0; background: var(--oxblood); padding: 0.28em 0.6em; border-radius: 100px; vertical-align: middle; margin-left: 0.5rem; position: relative; top: -0.12em; }
+.who-link { display: inline-flex; gap: 0.35em; align-items: center; margin-top: 0.85rem; font-family: var(--font-mono); font-size: 0.74rem; letter-spacing: 0.04em; color: var(--oxblood); transition: gap 0.3s var(--ease), color 0.3s; }
+.who-link:hover { color: var(--oxblood-dk); gap: 0.6em; }
 
 /* ---------------- live tools ---------------- */
 .tools-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; list-style: none; }

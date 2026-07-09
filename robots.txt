@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://werth-code.github.io/werth-design/sitemap.xml
+Sitemap: https://werth.design/sitemap.xml

@@ -1,8 +1,9 @@
 /* Werth Design — Live AI tool pages (shared, on-brand) */
 :root {
-  --paper:#f4f1ea; --card:#fffdf8; --ink:#1b1814; --oxblood:#8b2f2f;
-  --stone:#6f675c; --line:rgba(27,24,20,.13); --gold:#9a7b3f;
-  --ease:cubic-bezier(.2,.7,.2,1);
+  /* master Werth Design palette — keep in sync with /assets/styles.css */
+  --paper:#f1ebdf; --card:#fbf7ee; --ink:#1f1b16; --oxblood:#8a2b22;
+  --stone:#6b6253; --line:rgba(31,27,22,.16); --gold:#a6803f;
+  --ease:cubic-bezier(.2,.65,.2,1);
 }
 * { box-sizing:border-box; }
 html { -webkit-text-size-adjust:100%; }
