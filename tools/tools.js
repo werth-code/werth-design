@@ -71,6 +71,9 @@
           leadForm.querySelector(".lead-q").style.display = "none";
           leadForm.querySelector(".lead-row").style.display = "none";
           document.getElementById("leadOk").hidden = false;
+          /* conversion tags fire automatically once gtag/fbq base snippets are installed */
+          if (typeof gtag === "function") gtag("event", "generate_lead", { event_category: "tool-lead", event_label: tool });
+          if (typeof fbq === "function") fbq("track", "Lead");
         } else { leadBtn.disabled = false; leadBtn.textContent = leadLabel; }
       }).catch(function () { leadBtn.disabled = false; leadBtn.textContent = leadLabel; });
     });
