@@ -26,9 +26,12 @@
 
   if (ex) ex.addEventListener("click", function () { ta.value = ex.getAttribute("data-fill") || ""; ta.focus(); });
 
+  var pending = false;
   function run() {
+    if (pending) return;
     var input = (ta.value || "").trim();
     if (!input) { ta.focus(); return; }
+    pending = true;
     btn.disabled = true; btn.textContent = "Thinking…";
     out.classList.remove("show");
     fetch(WORKER, {
@@ -38,18 +41,20 @@
     })
       .then(function (r) { return r.json().then(function (d) { return { ok: r.ok, d: d }; }); })
       .then(function (res) {
-        btn.disabled = false; btn.textContent = LABEL;
         if (res.ok && res.d && res.d.reply) show(render(res.d.reply));
         else show("<em>" + esc((res.d && res.d.error) || "Something went wrong — please try again.") + "</em>");
       })
       .catch(function () {
-        btn.disabled = false; btn.textContent = LABEL;
         show("<em>Network hiccup — please try again.</em>");
+      })
+      .finally(function () {
+        pending = false;
+        btn.disabled = false; btn.textContent = LABEL;
       });
   }
 
   if (btn) btn.addEventListener("click", run);
-  if (ta) ta.addEventListener("keydown", function (e) { if ((e.metaKey || e.ctrlKey) && e.key === "Enter") run(); });
+  if (ta) ta.addEventListener("keydown", function (e) { if ((e.metaKey || e.ctrlKey) && e.key === "Enter") { e.preventDefault(); run(); } });
 
   // ---- Lead capture → Formspree ----
   var leadForm = document.getElementById("leadForm");
