@@ -90,15 +90,32 @@
     counters.forEach(animateCount);
   }
 
-  /* ---- free-audit deep-link: pre-select the form's project type ---- */
-  document.querySelectorAll("[data-audit]").forEach(function (link) {
+  /* ---- keep the requested offer consistent through the contact form ---- */
+  var projectType = document.getElementById("type");
+  var contactTitle = document.getElementById("contact-title");
+  var contactDescription = document.getElementById("contact-description");
+  var phone = document.getElementById("phone");
+  var phoneHint = document.getElementById("phone-hint");
+  var defaultTitle = contactTitle ? contactTitle.textContent : "";
+  var defaultDescription = contactDescription ? contactDescription.textContent : "";
+
+  function syncContactOffer() {
+    var missedCall = projectType && projectType.value === "Free missed-call test";
+    var audit = projectType && projectType.value === "Free site audit";
+    if (contactTitle) contactTitle.textContent = missedCall ? "Get your free missed-call test." : audit ? "Get your free site audit." : defaultTitle;
+    if (contactDescription) contactDescription.textContent = missedCall
+      ? "Share your business number and a little about your shop. I'll call your line the way a customer would, show you what they hear, and let you hear what my AI would have said instead."
+      : audit ? "Share your website and what you'd like to improve. I'll send you a plain-English audit — free, with no obligation."
+      : defaultDescription;
+    if (phone) { phone.required = Boolean(missedCall); phone.setCustomValidity(""); }
+    if (phoneHint) phoneHint.textContent = missedCall ? "— required for the test" : "— optional";
+  }
+  if (projectType) projectType.addEventListener("change", syncContactOffer);
+  syncContactOffer();
+  document.querySelectorAll("[data-audit], [data-missed-call], [data-website]").forEach(function (link) {
     link.addEventListener("click", function () {
-      var sel = document.getElementById("type");
-      if (sel) {
-        for (var i = 0; i < sel.options.length; i++) {
-          if (/audit/i.test(sel.options[i].textContent)) { sel.selectedIndex = i; break; }
-        }
-      }
+      if (projectType) projectType.value = link.hasAttribute("data-website") ? "Business website" : link.hasAttribute("data-missed-call") ? "Free missed-call test" : "Free site audit";
+      syncContactOffer();
       setTimeout(function () {
         var name = document.getElementById("name");
         if (name) name.focus({ preventScroll: true });
@@ -106,24 +123,38 @@
     });
   });
 
+  // Preserve the trade-page context using only known service identifiers.
+  var serviceNames = { "home-services": "Home services", "hvac": "HVAC", "plumbers": "Plumbing" };
+  var serviceKey = new URLSearchParams(window.location.search).get("service");
+  var serviceField = document.getElementById("service-interest");
+  if (serviceField && Object.prototype.hasOwnProperty.call(serviceNames, serviceKey)) {
+    serviceField.value = serviceNames[serviceKey];
+  }
+
   /* ---- contact form: Formspree if configured, else mailto fallback ---- */
   var form = document.querySelector(".contact-form");
   if (form) {
     var note = form.querySelector(".form-note");
     var configured = form.getAttribute("action").indexOf("REPLACE_WITH_YOUR_ID") === -1;
 
+    var submitting = false;
+    form.addEventListener("input", function (ev) {
+      if (ev.target.setCustomValidity) ev.target.setCustomValidity("");
+    });
     form.addEventListener("submit", function (ev) {
-      // basic required-field check
+      ev.preventDefault();
+      if (submitting) return;
+      // Validate before either the network request or the email fallback.
       var name = form.querySelector("#name");
       var email = form.querySelector("#email");
       var message = form.querySelector("#message");
-      if (!name.value.trim() || !email.value.trim() || !message.value.trim()) {
-        return; // let native validation handle it
-      }
+      [name, email, message, phone].forEach(function (field) {
+        if (field) field.setCustomValidity(field.required && !field.value.trim() ? "Please fill out this field." : "");
+      });
+      if (!form.reportValidity()) return;
 
       if (!configured) {
         // Fallback: no Formspree endpoint yet — compose an email instead.
-        ev.preventDefault();
         var type = form.querySelector("#type").value;
         var budget = form.querySelector("#budget").value;
         var website = (form.querySelector("#website") || {}).value || "";
@@ -132,6 +163,7 @@
           "Name: " + name.value + "\n" +
           "Email: " + email.value + "\n" +
           "Website: " + (website || "—") + "\n" +
+          "Business phone: " + (phone && phone.value || "—") + "\n" +
           "Project: " + type + "\n" +
           "Budget: " + budget + "\n\n" +
           message.value;
@@ -143,7 +175,7 @@
       }
 
       // Configured: submit to Formspree via fetch for a no-reload experience.
-      ev.preventDefault();
+      submitting = true;
       var btn = form.querySelector(".form-submit");
       var original = btn.textContent;
       btn.textContent = "Sending…";
@@ -155,6 +187,7 @@
       }).then(function (res) {
         if (res.ok) {
           form.reset();
+          syncContactOffer();
           if (note) { note.textContent = "Thank you — I'll be in touch within a day."; note.className = "form-note ok"; }
         } else {
           if (note) { note.textContent = "Something went wrong. Email matthewwerth@gmail.com instead."; note.className = "form-note err"; }
@@ -162,6 +195,7 @@
       }).catch(function () {
         if (note) { note.textContent = "Network error. Email matthewwerth@gmail.com instead."; note.className = "form-note err"; }
       }).finally(function () {
+        submitting = false;
         btn.textContent = original;
         btn.disabled = false;
       });

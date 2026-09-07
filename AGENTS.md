@@ -37,3 +37,10 @@ Custom agents are available for lead research, site auditing, sales drafts, deli
 Use delegation when the user requests parallel work; keep assignments bounded and file ownership explicit.
 Research, audits and writing roles return findings or drafts. They must not publish, contact people or mutate external systems.
 Delivery may edit an isolated local branch within authorized scope; QA reviews independently.
+
+## Explicit role loading
+Some clients expose generic collaboration tools without automatically exposing the named TOML roles.
+Before delegating to a named role, read its matching `.codex/agents/<role>.toml` and pass its developer_instructions and the task scope explicitly to the subagent.
+Available role filenames are chief_of_staff, lead_scout, site_auditor, sales_writer, delivery_engineer, qa_security and content_writer.
+Treat sandbox_mode as a requested restriction, not proof that a client applied it. Check the actual runtime permissions and keep assignments within the user's authorization.
+Report explicit role-file loading separately from verified automatic role discovery; never claim parsing alone installs or enforces a role.
